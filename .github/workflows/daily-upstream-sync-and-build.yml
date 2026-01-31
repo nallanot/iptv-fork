@@ -40,7 +40,13 @@ jobs:
 
       - name: Build combined playlist
         run: |
+          chmod +x scripts/build-combined-m3u.sh || true
           bash scripts/build-combined-m3u.sh
+
+      - name: Debug changes
+        run: |
+          git status
+          git diff --stat || true
 
       - name: Create Pull Request (commit changes if any)
         uses: peter-evans/create-pull-request@v6
@@ -58,4 +64,4 @@ jobs:
           commit-message: "chore: rebuild combined playlist"
           add-paths: |
             custom2/combined.m3u
-            # si ton script modifie aussi d'autres fichiers, ajoute-les ici
+          fail-on-empty: false
