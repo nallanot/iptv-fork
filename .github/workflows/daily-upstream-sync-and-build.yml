@@ -33,14 +33,26 @@ jobs:
         run: |
           git fetch upstream master --prune
 
+      - name: Save custom files before reset
+        run: |
+          mkdir -p /tmp/custom_keep/scripts /tmp/custom_keep/custom2
+          if [ -f scripts/build-combined-m3u.sh ]; then cp -f scripts/build-combined-m3u.sh /tmp/custom_keep/scripts/; fi
+          if [ -f custom2/my.m3u ]; then cp -f custom2/my.m3u /tmp/custom_keep/custom2/; fi
+
       - name: Reset work branch to upstream (NO MERGE COMMIT)
         run: |
           git checkout -B bot/daily-sync
           git reset --hard upstream/master
 
+      - name: Restore custom files after reset
+        run: |
+          mkdir -p scripts custom2
+          if [ -f /tmp/custom_keep/scripts/build-combined-m3u.sh ]; then cp -f /tmp/custom_keep/scripts/build-combined-m3u.sh scripts/; fi
+          if [ -f /tmp/custom_keep/custom2/my.m3u ]; then cp -f /tmp/custom_keep/custom2/my.m3u custom2/; fi
+
       - name: Build combined playlist
         run: |
-          chmod +x scripts/build-combined-m3u.sh || true
+          chmod +x scripts/build-combined-m3u.sh
           bash scripts/build-combined-m3u.sh
 
       - name: Debug changes
@@ -63,5 +75,7 @@ jobs:
             playlist
           commit-message: "chore: rebuild combined playlist"
           add-paths: |
+            scripts/build-combined-m3u.sh
+            custom2/my.m3u
             custom2/combined.m3u
           skip-no-changes: true
