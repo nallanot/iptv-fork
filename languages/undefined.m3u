@@ -1154,7 +1154,7 @@ http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/65
 #EXTINF:-1 tvg-id="" tvg-logo="" group-title="Undefined",Hotel Inspector (1080p)
 https://amg00654-itv-amg00654c4-rakuten-uk-5263.playouts.now.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="HTV7.vn@HD" tvg-logo="https://i.postimg.cc/fyCZR0kb/HTV7-logo-2015.png" group-title="General",HTV7 HD (1080p)
-https://vc.101vn.com/htv/htvcmb.php?id=256
+https://liveh12.vtvprime.vn/hls/HTV7HD/index.m3u8
 #EXTINF:-1 tvg-id="HTV9.vn@HD" tvg-logo="https://i.postimg.cc/DzGTbNmH/HTV9-logo-2015.png" group-title="General;News",HTV9 HD (1080p) [Geo-blocked]
 https://live.fptplay53.net/epzhd1/htv9hd_vhls.smil/chunklist.m3u8
 #EXTINF:-1 tvg-id="" tvg-logo="" group-title="Undefined",Hudhud TV
@@ -1680,8 +1680,12 @@ https://amg00627-amg00627c30-rakuten-es-3990.playouts.now.amagi.tv/playlist/amg0
 https://aegis-cloudfront-1.tubi.video/cf8b86e9-932a-4454-99c5-32169b6a330f/playlist.m3u8
 #EXTINF:-1 tvg-id="MRTV.mm@HD" tvg-logo="https://i.imgur.com/uyv7oJH.png" group-title="General",MRTV (720p)
 https://asia.sipradius.net/cache/SEAGames4/master.m3u8
-#EXTINF:-1 tvg-id="MSNBC.us@SD" tvg-logo="" group-title="Undefined",MSNBC (720p)
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="Undefined",MSNBC (360p) [Not 24/7]
+https://tvpass.org/live/MSNBC/sd
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="Undefined",MSNBC (720p)
 http://41.205.93.154/MSNBC/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="Undefined",MSNBC (720p) [Not 24/7]
+https://tvpass.org/live/MSNBC/hd
 #EXTINF:-1 tvg-id="" tvg-logo="" group-title="Undefined",MTRSPT 1 (1080p)
 https://amg02873-kravemedia-mtrspt1-samsungau-2anp4.amagi.tv/playlist/amg02873-kravemedia-mtrspt1-samsungau/playlist.m3u8
 #EXTINF:-1 tvg-id="" tvg-logo="" group-title="Undefined",MTRSPT 1 (1080p)
@@ -2762,7 +2766,7 @@ https://dr4jwhk0sty71.cloudfront.net/scheduler/scheduleMaster/444.m3u8
 https://svt-live-channel.akamaized.net/l6/se/svtb/master-fmp4.m3u8?defaultSubLang=1&format=hls
 #EXTINF:-1 tvg-id="" tvg-logo="" group-title="Undefined",Swar Shree
 https://d35j504z0x2vu2.cloudfront.net/v1/master/0bc8e8376bd8417a1b6761138aa41c26c7309312/swar-shree/index.m3u8?ads.vf=ARmRw-dFDbm
-#EXTINF:-1 tvg-id="Syfy.us@East" tvg-logo="" group-title="Undefined",Syfy East
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="Undefined",Syfy East
 https://fl1.moveonjoy.com/SYFY/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-logo="" group-title="Undefined",T2 Tennis Channel (1080p)
 https://ttc-tennischannelus-firetv.amagi.tv/playlist.m3u8
@@ -2858,7 +2862,7 @@ http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/65
 https://streams2.sofast.tv/sofastplayout/WiseM3U8_21/master.m3u8
 #EXTINF:-1 tvg-id="" tvg-logo="" group-title="Undefined",Teton Gravity Research (1080p)
 https://d1ur2fy7sesb3x.cloudfront.net/hls/main.m3u8
-#EXTINF:-1 tvg-id="Teve2.tr@SD" tvg-logo="" group-title="Undefined",Teve2 (1080p)
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="Undefined",Teve2 (1080p)
 https://demiroren-live.daioncdn.net/teve2/teve2.m3u8
 #EXTINF:-1 tvg-id="" tvg-logo="" group-title="Undefined",TeveColombia (720p) [Not 24/7]
 https://cloud6.livescast.com:3900/live/tevecolombialive.m3u8
@@ -3196,8 +3200,6 @@ https://waterbear-waterbear-rakuten.amagi.tv/playlist.m3u8
 https://fl1.moveonjoy.com/KY_Louisville_NBC/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-logo="" group-title="Undefined",WBBH NBC (Fort Myers FL)
 https://fl1.moveonjoy.com/FL_FORT_MYERS_NBC/index.m3u8
-#EXTINF:-1 tvg-id="" tvg-logo="" group-title="Undefined",WBBM CBS (Chicago IL)
-https://fl1.moveonjoy.com/IL_Chicago_CBS/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-logo="" group-title="Undefined",WBIR NBC (Knoxville TN)
 https://fl1.moveonjoy.com/TN_Knoxville_NBC/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-logo="" group-title="Undefined",WBMA-LD ABC (Birmingham AL)
@@ -3288,12 +3290,6 @@ https://fl1.moveonjoy.com/OH_CLEVELAND_ABC/index.m3u8
 https://fl1.moveonjoy.com/TX_DALLAS_ABC/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-logo="" group-title="Undefined",WFFT FOX (Fort Wayne IN)
 https://fl1.moveonjoy.com/IN_Fort_Wayne_FOX/mpegts
-#EXTINF:-1 tvg-id="" tvg-logo="" group-title="Undefined",WFLA NBC (Tampa FL)
-https://fl1.moveonjoy.com/FL_Tampa_NBC/index.m3u8
-#EXTINF:-1 tvg-id="" tvg-logo="" group-title="Undefined",WFLD FOX (Chicago IL)
-https://fl1.moveonjoy.com/IL_Chicago_FOX/index.m3u8
-#EXTINF:-1 tvg-id="" tvg-logo="" group-title="Undefined",WFLX FOX (West Palm Beach FL)
-https://fl1.moveonjoy.com/FL_West_Palm_Beach_FOX/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-logo="" group-title="Undefined",WFMZ Dorney Park Camera
 https://cdn.jaybirdtv.com/wfmz/5/live/master.m3u8
 #EXTINF:-1 tvg-id="" tvg-logo="" group-title="Undefined",WFMZ PennST camera
@@ -3308,8 +3304,6 @@ https://d3b3ldcvgsu291.cloudfront.net/v1/master/9d062541f2ff39b5c0f48b743c6411d2
 https://fl1.moveonjoy.com/FL_Miami_CBS/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-logo="" group-title="Undefined",WFOX FOX (Jacksonville FL)
 https://fl1.moveonjoy.com/FL_Jacksonville_FOX/index.m3u8
-#EXTINF:-1 tvg-id="" tvg-logo="" group-title="Undefined",WFTS ABC (Tampa FL)
-https://fl1.moveonjoy.com/FL_Tampa_ABC/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-logo="" group-title="Undefined",WFTV ABC (Orlando FL)
 https://fl1.moveonjoy.com/FL_ORLANDO_ABC/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-logo="" group-title="Undefined",WFXG FOX (Augusta GA)
@@ -3372,8 +3366,6 @@ https://fl1.moveonjoy.com/MS_JACKSON_CBS/index.m3u8
 https://fl1.moveonjoy.com/FL_JACKSONVILLE_ABC/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-logo="" group-title="Undefined",WKBW ABC (Buffalo NY)
 https://fl1.moveonjoy.com/NY_BUFFALO_ABC/mpegts
-#EXTINF:-1 tvg-id="" tvg-logo="" group-title="Undefined",WKCF CW (Orlando FL)
-https://fl1.moveonjoy.com/CW_ORLANDO/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-logo="" group-title="Undefined",WKMG CBS (Orlando FL)
 https://fl1.moveonjoy.com/FL_ORLANDO_CBS/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-logo="" group-title="Undefined",WKRG CBS (Mobile AL)
@@ -3386,10 +3378,6 @@ https://fl1.moveonjoy.com/KY_Lexington_CBS/mpegts
 https://fl1.moveonjoy.com/MS_JACKSON_NBC/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-logo="" group-title="Undefined",WLKY CBS (Louisville KY)
 https://fl1.moveonjoy.com/KY_LOUISVILLE_CBS/index.m3u8
-#EXTINF:-1 tvg-id="" tvg-logo="" group-title="Undefined",WLS ABC (Chicago IL)
-https://fl1.moveonjoy.com/IL_CHICAGO_ABC/index.m3u8
-#EXTINF:-1 tvg-id="" tvg-logo="" group-title="Undefined",WMAQ NBC (Chicago IL)
-https://fl1.moveonjoy.com/IL_Chicago_NBC/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-logo="" group-title="Undefined",WMC NBC (Memphis TN)
 https://fl1.moveonjoy.com/TN_Memphis_NBC/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-logo="" group-title="Undefined",WMGT NBC (Macon GA)
@@ -3428,8 +3416,6 @@ https://d35j504z0x2vu2.cloudfront.net/v1/master/0bc8e8376bd8417a1b6761138aa41c26
 https://aenetworks-worldwartv-rakuten.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="" tvg-logo="" group-title="Undefined",World's Most Evil Killers (720p)
 https://aegis-cloudfront-1.tubi.video/c7400837-bc80-432a-8216-731d0b31a05f/master.m3u8
-#EXTINF:-1 tvg-id="" tvg-logo="" group-title="Undefined",WPEC CBS (West Palm Beach FL)
-https://fl1.moveonjoy.com/FL_West_Palm_Beach_CBS/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-logo="" group-title="Undefined",WPGH FOX (Pittsburgh PA)
 https://fl1.moveonjoy.com/PA_Pittsburgh_FOX/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-logo="" group-title="Undefined",WPIX-DT1
@@ -3472,8 +3458,6 @@ https://fl1.moveonjoy.com/FL_Jacksonville_NBC/index.m3u8
 https://fl1.moveonjoy.com/TN_Knoxville_FOX/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-logo="" group-title="Undefined",WTOC CBS (Savannah GA)
 https://fl1.moveonjoy.com/GA_SAVANNAH_CBS/index.m3u8
-#EXTINF:-1 tvg-id="" tvg-logo="" group-title="Undefined",WTOG CW (Tampa FL)
-https://fl1.moveonjoy.com/FL_Tampa_CW44/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-logo="" group-title="Undefined",WTTG FOX (Washington DC)
 https://fl1.moveonjoy.com/DC_WASHINGTON_FOX/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-logo="" group-title="Undefined",WTVJ NBC (Miami FL)
@@ -3506,8 +3490,6 @@ https://fl1.moveonjoy.com/LA_NEW_ORLEANS_FOX/index.m3u8
 https://fl1.moveonjoy.com/VA_Richmond_NBC/mpegts
 #EXTINF:-1 tvg-id="" tvg-logo="" group-title="Undefined",WWL CBS (New Orleans LA)
 https://fl1.moveonjoy.com/LA_NEW_ORLEANS_CBS/index.m3u8
-#EXTINF:-1 tvg-id="" tvg-logo="" group-title="Undefined",WWLP NBC (Springfield MA)
-https://fl1.moveonjoy.com/MA_SPRINGFIELD_NBC/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-logo="" group-title="Undefined",WWLP NBC (Springfield MA)
 https://fl1.moveonjoy.com/MA_SPRINGFIELD_NBC/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-logo="" group-title="Undefined",WXIA NBC (Atlanta GA)
