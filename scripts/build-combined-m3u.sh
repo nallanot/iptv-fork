@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -e
+set -euo pipefail
 
 echo "=== BUILD COMBINED M3U ==="
 pwd
@@ -16,6 +16,7 @@ UPSTREAM_URLS=(
 mkdir -p custom2
 
 TMP="$(mktemp)"
+COMBINED_TMP="$(mktemp)"
 echo "Temp file: $TMP"
 
 FOUND=0
@@ -55,7 +56,35 @@ echo "Building combined playlist…"
   else
     echo "# custom2/my.m3u not found"
   fi
-} > "$OUT_PLAYLIST"
+} > "$COMBINED_TMP"
+
+echo "Combined draft created (pre-fix):"
+wc -l "$COMBINED_TMP"
+
+echo "Converting viamotion DASH (.mpd) to HLS8 (.m3u8) when available…"
+
+# Extract unique viamotion DASH URLs
+mapfile -t DASH_URLS < <(grep -Eo 'https://viamotionhsi\.netplus\.ch/live/eds/[^ ]+/browser-dash/[^ ]+\.mpd' "$COMBINED_TMP" | sort -u || true)
+
+echo "Found ${#DASH_URLS[@]} viamotion DASH URL(s)"
+
+# Replace in the combined temp (only if HLS exists)
+for u in "${DASH_URLS[@]}"; do
+  hls="${u/browser-dash/browser-HLS8}"
+  hls="${hls%.mpd}.m3u8"
+
+  # HEAD first, fallback to GET if needed
+  if curl -fsSI --max-time 8 "$hls" >/dev/null 2>&1 || curl -fsS --max-time 8 -o /dev/null "$hls" >/dev/null 2>&1; then
+    # Replace all occurrences
+    sed -i "s#${u}#${hls}#g" "$COMBINED_TMP"
+    echo "OK  : $u -> $hls"
+  else
+    echo "SKIP: $u (HLS not found)"
+  fi
+done
+
+# Write final output
+mv "$COMBINED_TMP" "$OUT_PLAYLIST"
 
 echo "Combined playlist created:"
 ls -la custom2
