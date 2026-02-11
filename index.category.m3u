@@ -12999,7 +12999,7 @@ https://dash3.antik.sk/live/test_current_time_atktv/playlist.m3u8
 http://85.238.112.40:8810/hls_sec/239.33.75.33-.m3u8
 #EXTINF:-1 tvg-id="PerviyInformationniy.by@SD" tvg-logo="https://i.imgur.com/eIiXRAI.png" group-title="News",Первый информационный (1080p)
 https://ngtrk.dc.beltelecom.by/ngtrk/smil:informacionnyy.smil/playlist.m3u8
-#EXTINF:-1 tvg-id="PervyyRespublikanskiy.ru@SD" tvg-logo="" group-title="News",Первый Республиканский
+#EXTINF:-1 tvg-id="PervyyRespublikanskiy.ru@SD" tvg-logo="https://i.imgur.com/ti4OMBv.png" group-title="News",Первый Республиканский
 https://streaming.televizor-24-tochka.ru/live/27.m3u8
 #EXTINF:-1 tvg-id="GovoritMoskva.ru@SD" tvg-logo="https://i.imgur.com/z2mxf3E.png" group-title="News",Радио Говорит Москва (Веб-камера) (720p)
 https://video.govoritmoskva.ru/rufm/index.m3u8

@@ -124,7 +124,7 @@ http://91.193.128.233:1935/live/otv.stream/playlist.m3u8
 http://91.194.79.46:8081/stream1/channel1/playlist.m3u8
 #EXTINF:-1 tvg-id="PerviyKrymskiy.ru@SD" tvg-logo="https://i.imgur.com/i6hg7QG.png" group-title="General",Первый Крымский (720p)
 https://live1.1tvcrimea.ru/1tvcrimea.m3u8
-#EXTINF:-1 tvg-id="PervyyRespublikanskiy.ru@SD" tvg-logo="" group-title="News",Первый Республиканский
+#EXTINF:-1 tvg-id="PervyyRespublikanskiy.ru@SD" tvg-logo="https://i.imgur.com/ti4OMBv.png" group-title="News",Первый Республиканский
 https://streaming.televizor-24-tochka.ru/live/27.m3u8
 #EXTINF:-1 tvg-id="PravdaTUT.ua@SD" tvg-logo="https://i.imgur.com/gvgFoFB.png" http-user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:97.0) Gecko/20100101 Firefox/97.0" group-title="Undefined",ПравдаТУТ (720p)
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:97.0) Gecko/20100101 Firefox/97.0

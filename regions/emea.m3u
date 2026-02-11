@@ -8068,7 +8068,7 @@ https://live1.1tvcrimea.ru/1tvcrimea.m3u8
 http://hz1.teleport.cc/HLS/SD.m3u8
 #EXTINF:-1 tvg-id="FirstMusicChannelRussia.by@SD" tvg-logo="https://i.imgur.com/rEo7nR1.png" group-title="Music",Первый Музыкальный Канал Россия (576p)
 http://rtmp.one.by:2200
-#EXTINF:-1 tvg-id="PervyyRespublikanskiy.ru@SD" tvg-logo="" group-title="News",Первый Республиканский
+#EXTINF:-1 tvg-id="PervyyRespublikanskiy.ru@SD" tvg-logo="https://i.imgur.com/ti4OMBv.png" group-title="News",Первый Республиканский
 https://streaming.televizor-24-tochka.ru/live/27.m3u8
 #EXTINF:-1 tvg-id="YaPervyy.ru@HD" tvg-logo="https://yarreg.ru/gallery/news/2025/03/293241/3.jpeg" group-title="General",Первый Ярославский
 https://yaroslavl.mediacdn.ru/cdn/pervyaroslavsk/playlist.m3u8
