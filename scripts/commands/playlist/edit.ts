@@ -69,15 +69,14 @@ export default async function main(filepath: string) {
   }
 
   streamsWithoutId.forEach((stream: Stream) => {
-    if (stream.channel === '-') {
-      stream.channel = ''
+    if (stream.tvgId === '-') {
+      stream.tvgId = ''
     }
   })
 }
 
 async function selectChannel(stream: Stream): Promise<string> {
-  const query = escapeRegex(stream.title)
-  const similarChannels = searchChannels(query)
+  const similarChannels = searchChannels(stream.title)
   const url = truncate(stream.url, 50)
 
   const selected: ChoiceValue = await select({
@@ -183,8 +182,4 @@ function save(filepath: string) {
   const playlist = new Playlist(parsedStreams)
   storage.saveSync(filepath, playlist.toString())
   logger.info(`\nFile '${filepath}' successfully saved`)
-}
-
-function escapeRegex(string: string) {
-  return string.replace(/[/\-\\^$*+?.()|[\]{}]/g, '\\$&')
 }
