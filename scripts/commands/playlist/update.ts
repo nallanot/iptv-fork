@@ -1,20 +1,19 @@
-import { IssueLoader, PlaylistParser } from '../../core'
+import { isURI, getStreamInfo, loadIssues } from '../../utils'
 import { Playlist, Issue, Stream } from '../../models'
 import { loadData, data as apiData } from '../../api'
 import { Logger, Collection } from '@freearhey/core'
-import { isURI, getStreamInfo } from '../../utils'
 import { Storage } from '@freearhey/storage-js'
 import { STREAMS_DIR } from '../../constants'
+import { PlaylistParser } from '../../core'
 import * as sdk from '@iptv-org/sdk'
 
 const processedIssues = new Collection()
 
 async function main() {
   const logger = new Logger({ level: -999 })
-  const issueLoader = new IssueLoader()
 
   logger.info('loading issues...')
-  const issues = await issueLoader.load()
+  const issues = await loadIssues()
 
   logger.info('loading data from api...')
   await loadData()

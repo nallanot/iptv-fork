@@ -4,11 +4,13 @@ import { select, input } from '@inquirer/prompts'
 import { Playlist, Stream } from '../../models'
 import { Storage } from '@freearhey/storage-js'
 import { PlaylistParser } from '../../core'
+import { ROOT_DIR } from '../../constants'
+import { truncate } from '../../utils'
 import nodeCleanup from 'node-cleanup'
 import * as sdk from '@iptv-org/sdk'
-import { truncate } from '../../utils'
 import { Command } from 'commander'
 import readline from 'readline'
+import path from 'node:path'
 
 type ChoiceValue = { type: string; value?: sdk.Models.Feed | sdk.Models.Channel }
 type Choice = { name: string; short?: string; value: ChoiceValue; default?: boolean }
@@ -30,6 +32,14 @@ program.argument('<filepath>', 'Path to *.channels.xml file to edit').parse(proc
 
 const filepath = program.args[0]
 const logger = new Logger()
+
+const resolvedPath = path.resolve(filepath)
+const relative = path.relative(ROOT_DIR, resolvedPath)
+if (relative.startsWith('..') || path.isAbsolute(relative)) {
+  console.error(`Error: filepath "${filepath}" is outside the working directory`)
+  process.exit(1)
+}
+
 const storage = new Storage()
 let parsedStreams = new Collection<Stream>()
 

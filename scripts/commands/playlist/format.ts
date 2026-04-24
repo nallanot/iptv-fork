@@ -82,7 +82,7 @@ async function main() {
   logger.info('adding the missing quality...')
   const progressBar = new cliProgress.SingleBar({
     clearOnComplete: true,
-    format: `[{bar}] {percentage}% | {value}/{total}`
+    format: '[{bar}] {percentage}% | {value}/{total}'
   })
   progressBar.start(streams.count(), 0)
   await eachLimit(streams.all(), options.parallel, async (stream: Stream) => {

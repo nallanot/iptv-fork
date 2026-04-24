@@ -7,7 +7,7 @@ https://moviesphereuk-samsunguk.amagi.tv/playlist.m3u8
 https://cdn-ue1-prod.tsv2.amagi.tv/linear/qwestAAAA-qwestjazz-uk-samsungtv/playlist.m3u8
 #EXTINF:-1 tvg-id="TennisChannel.us@SD",Tennis Channel (UK) (720p)
 https://tennischannel-int-samsunguk.amagi.tv/playlist.m3u8
-#EXTINF:-1 tvg-id="Timeline.us@SD",Time Line (720p)
+#EXTINF:-1 tvg-id="HistoryHit.uk@SD",History Hit (720p)
 https://timeline-samsung-uk.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="Wonder.uk@SD",Wonder (720p)
 https://wonder-samsung-uk.amagi.tv/playlist.m3u8

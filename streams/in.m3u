@@ -17,20 +17,8 @@ https://b.jsrdn.com/strm/channels/9xm/master.m3u8
 https://thelegitpro.in/HDlive/22scope/index.fmp4.m3u8
 #EXTINF:-1 tvg-id="24News.in@SD",24 News (576p)
 https://segment.yuppcdn.net/110322/channel24/playlist.m3u8
-#EXTINF:-1 tvg-id="Andflix.in@HD",&flix HD (1080p)
-http://116.90.120.151:8000/play/a0il/index.m3u8
-#EXTINF:-1 tvg-id="Andpictures.in@HD",&pictures HD (1080p)
-http://103.161.153.165:8000/play/a05u/index.m3u8
-#EXTINF:-1 tvg-id="Andpictures.in@HD",&pictures HD (1080p)
-http://103.229.254.25:7001/play/a033/index.m3u8
-#EXTINF:-1 tvg-id="AndpriveHD.in@SD",&prive HD (1080p)
-http://103.161.153.165:8000/play/a05m/index.m3u8
-#EXTINF:-1 tvg-id="AndpriveHD.in@SD",&prive HD (1080p)
-http://116.90.120.151:8000/play/a0it/index.m3u8
 #EXTINF:-1 tvg-id="AndTV.in@SD",&TV (576p)
 http://103.229.254.25:7001/play/a09v/index.m3u8
-#EXTINF:-1 tvg-id="AndTV.in@HD",&TV HD (1080p)
-http://103.161.153.165:8000/play/a05c/index.m3u8
 #EXTINF:-1 tvg-id="AndTV.in@HD",&TV HD (1080p)
 http://103.229.254.25:7001/play/a034/index.m3u8
 #EXTINF:-1 tvg-id="AndTV.in@International",&TV International (1080p)
@@ -206,24 +194,12 @@ https://n18syndication.akamaized.net/bpk-tv/CNBC_Tv18_Prime_HD_NW18_MOB/output01
 https://legitpro.co.in/cnews/cnews/index.fmp4.m3u8
 #EXTINF:-1 tvg-id="Colors.in@SD",Colors (576p)
 http://103.229.254.25:7001/play/a077/index.m3u8
-#EXTINF:-1 tvg-id="ColorsBanglaCinema.in@SD",Colors Bangla Cinema (576p)
-http://116.90.120.151:8000/play/a0jh/index.m3u8
 #EXTINF:-1 tvg-id="ColorsBangla.in@HD",Colors Bangla HD (1080p)
 http://103.229.254.25:7001/play/a0ds/index.m3u8
-#EXTINF:-1 tvg-id="ColorsCineplexBollywood.in@SD",Colors Cineplex Bollywood (576p)
-http://103.182.170.32:8888/play/a01o
-#EXTINF:-1 tvg-id="ColorsCineplex.in@HD",Colors Cineplex HD (1080p)
-http://116.90.120.151:8000/play/a0ji/index.m3u8
-#EXTINF:-1 tvg-id="ColorsCineplexSuperhits.in@SD",Colors Cineplex Superhits (576p)
-http://116.90.120.151:8000/play/a0kl/index.m3u8
 #EXTINF:-1 tvg-id="Colors.in@HD",Colors HD (1080p)
 http://103.229.254.25:7001/play/a0a1/index.m3u8
-#EXTINF:-1 tvg-id="Colors.in@HD",Colors HD (480p)
-http://tvn1.chowdhury-shaheb.com/colors/index.m3u8
 #EXTINF:-1 tvg-id="ColorsInfinity.in@HD",Colors Infinity HD (1080p)
 http://103.229.254.25:7001/play/a0du/index.m3u8
-#EXTINF:-1 tvg-id="ColorsRishteyAsia.in@SD",Colors Rishtey Asia (576p)
-http://116.90.120.151:8000/play/a0ku/index.m3u8
 #EXTINF:-1 tvg-id="CTVNAKDPlus.in@SD",CTVN AKD Plus (1080p)
 https://live.legitpro.co.in/ctvnakdplus/index.m3u8
 #EXTINF:-1 tvg-id="Dangal2.in@SD",Dangal 2 (720p)
@@ -244,7 +220,7 @@ https://cdn.smartstream.video/smartstream-us/dy365/dy365/playlist.m3u8
 https://live.streamjo.com/eetlive/eettv.m3u8
 #EXTINF:-1 tvg-id="Enterr10Bangla.in@SD",Enterr 10 Bangla (720p) [Not 24/7]
 https://live-bangla.akamaized.net/liveabr/playlist.m3u8
-#EXTINF:-1 tvg-id="EpicTV.in@SD",Epic TV (1080p)
+#EXTINF:-1 tvg-id="EpicTV.in@Digital",Epic TV Digital (1080p)
 https://cc-czbq30x55knit.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-czbq30x55knit/DIYC/PMSL/IN10/Epic_TV_IN_B/Epic_TV_IN_B.m3u8
 #EXTINF:-1 tvg-id="ETNow.in@SD",ET Now (720p) [Geo-blocked]
 #EXTVLCOPT:http-referrer=https://www.timesnownews.com/
@@ -280,12 +256,10 @@ https://d2z3q47xzd535o.cloudfront.net/v1/master/9d43eacaed199f8d5883927e7aef514a
 https://livegeorouus.akamaized.net/100823/etvhd_2500/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b
 #EXTINF:-1 tvg-id="FatehTV.in@SD",Fateh TV (1080p) [Not 24/7]
 https://ott.livelegitpro.in/fatehtv/fatehtv/index.m3u8
-#EXTINF:-1 tvg-id="FilamchiBhojpuri.in@SD",Filamchi Bhojpuri (1080p)
+#EXTINF:-1 tvg-id="EpicBhojpuri.in@SD",Filamchi Bhojpuri (1080p)
 https://epiconvh.akamaized.net/live/filamchi/master.m3u8
 #EXTINF:-1 tvg-id="FirstIndiaNews.in@SD",First India News (360p) [Not 24/7]
 https://xlbor37ydvaj-hls-live.wmncdn.net/firstindianewstv1/live.stream/index.m3u8
-#EXTINF:-1 tvg-id="FoodFood.in@SD",Food Food (576p)
-http://45.148.145.57/IN_FOODFOOD/index.m3u8
 #EXTINF:-1 tvg-id="GangaurTV.in@SD",Gangaur TV (1080p)
 https://pbgangaur.wiseplayout.com/Gangaur/master.m3u8
 #EXTINF:-1 tvg-id="GlobalPunjab.in@SD",Global Punjab (1080p)
@@ -372,8 +346,6 @@ http://103.229.254.25:7001/play/a0dt/index.m3u8
 https://yuppmedtaorire.akamaized.net/v1/master/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/janamtv_nim_https/140622/janamtv/playlist.m3u8
 #EXTINF:-1 tvg-id="JantaTV.in@SD",Janta TV (1080p)
 https://live.jswk.online/IK_RTPM/live/index.m3u8
-#EXTINF:-1 tvg-id="JayaMax.in@SD",Jaya Max (576p)
-https://mac.zenplay.top/linear-live.php?amp;e=.m3u8&amp;vtoken=&id=994
 #EXTINF:-1 tvg-id="JayaPlus.in@SD",Jaya Plus (576p)
 https://mumbai-edge.smartplaytv.in/JayaPLus/index.m3u8
 #EXTINF:-1 tvg-id="JK24x7News.in@SD",JK 24x7 News (720p) [Not 24/7]
@@ -412,8 +384,6 @@ https://stream.ottlive.co.in/livingindia/index.m3u8
 https://see.lokshahi.live/live/index.m3u8
 #EXTINF:-1 tvg-id="MSignMedia.in@SD",M Sign Media (720p) [Not 24/7]
 http://rtmp2.logicwebs.in:1935/msign/msignmedia/playlist.m3u8
-#EXTINF:-1 tvg-id="MadhaTV.in@SD",Madha TV (600p)
-https://60e68b19dd194.streamlock.net:55/madhatv/madhatv.stream_HDp/playlist.m3u8
 #EXTINF:-1 tvg-id="MahaaBhakti.in@SD",Mahaa Bhakti (1080p)
 https://mumbai-edge.smartplaytv.in/MahaBhakthi/index.m3u8
 #EXTINF:-1 tvg-id="MahaaMax.in@SD",Mahaa Max (1080p)
@@ -469,21 +439,13 @@ http://103.161.153.165:8000/play/a04o/index.m3u8
 http://116.90.120.151:8000/play/a0i4/index.m3u8
 #EXTINF:-1 tvg-id="MoviesNow.in@HD",Movies Now HD (1080p)
 http://103.161.153.165:8000/play/mnh/index.m3u8
-#EXTINF:-1 tvg-id="MoviesNow.in@HD",Movies Now HD (1080p)
-http://116.90.120.151:8000/play/a0ib/index.m3u8
-#EXTINF:-1 tvg-id="MTV.in@HD",MTV HD (1080p)
-http://116.90.120.151:8000/play/a0ig/index.m3u8
 #EXTINF:-1 tvg-id="NambikkaiTV.in@SD",Nambikkai TV (576p)
 https://mumt02.tangotv.in/NAMBIKKAITV/index.m3u8
 #EXTINF:-1 tvg-id="NamdhariTV.in@SD",Namdhari (404p) [Not 24/7]
 https://namdhari.tv/live/sbs1.m3u8
 #EXTINF:-1 tvg-id="NandighoshaTV.in@SD",Nandighosha TV (720p)
 https://www.nandighoshatvlive.com/hls/stream/index.m3u8
-#EXTINF:-1 tvg-id="NationalGeographic.in@HD",National Geographic HD
-http://116.90.120.151:8000/play/a0in/index.m3u8
-#EXTINF:-1 tvg-id="NationalGeographicWild.in@HD",National Geographic Wild HD (1080p)
-http://116.90.120.151:8000/play/a0ie/index.m3u8
-#EXTINF:-1 tvg-id="Nazara.in@SD",Nazara (1080p)
+#EXTINF:-1 tvg-id="EpicBharat.in@SD",Nazara (1080p)
 https://cc-p1izg43bk7sj5.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-p1izg43bk7sj5/DIYC/PMSL/IN10/Nazara_IN_B/Nazara_IN_B.m3u8
 #EXTINF:-1 tvg-id="NDTV24x7.in@SD",NDTV 24X7 (480p) [Not 24/7]
 https://ndtv24x7elemarchana.akamaized.net/hls/live/2003678/ndtv24x7/master.m3u8
@@ -554,12 +516,6 @@ https://d18a8tqmogafg2.cloudfront.net/newsmalayalam/index.m3u8
 https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/6cd2f649739a45ca9de1daf81cc7d0f2/index.m3u8
 #EXTINF:-1 tvg-id="NewsTamil24x7.in@SD",News Tamil 24x7 (1080p)
 https://d18a8tqmogafg2.cloudfront.net/newstamil/index.m3u8
-#EXTINF:-1 tvg-id="NickHDPlus.in@HD",Nick HD+ (1080p)
-http://116.90.120.151:8000/play/a0i3/index.m3u8
-#EXTINF:-1 tvg-id="NickJr.in@SD",Nick Jr. (576p)
-http://116.90.120.151:8000/play/a0h5/index.m3u8
-#EXTINF:-1 tvg-id="Nickelodeon.in@SD",Nickelodeon (576p)
-http://116.90.120.151:8000/play/a0hj/index.m3u8
 #EXTINF:-1 tvg-id="NKTV24x7.in@SD",NK TV 24x7 (1080p)
 https://nktv.smartstream.video/smartstream-us/nktvplus/nktvplus/chunks.m3u8
 #EXTINF:-1 tvg-id="NKRTVKannada.in@SD",NKR TV Kannada (576p)
@@ -621,14 +577,8 @@ https://segment.yuppcdn.net/240122/puthiya/playlist.m3u8
 https://thelegitpro.in/pntv/rplusnews24x7/index.m3u8
 #EXTINF:-1 tvg-id="RaftaarMedia.in@SD",Raftaar Media (240p)
 https://6n3yorwpy9ok-hls-live.5centscdn.com/raftaarmedia/243bd1ce0387f18005abfc43b001646a.sdp/playlist.m3u8
-#EXTINF:-1 tvg-id="RajDigitalPlus.in@SD",Raj Digital Plus (1080p)
-https://livestream.rajtv.tv/hlslive/Admin/px08241087/live/RajTV_Digital_plus/master_1.m3u8
 #EXTINF:-1 tvg-id="RajMusixKannada.in@SD",Raj Musix Kannada (576p)
 https://mumt01.tangotv.in/RAJMUSIXKANDA/index.m3u8
-#EXTINF:-1 tvg-id="RajMusixTamil.in@SD",Raj Musix Tamil (1080p)
-https://livestream.rajtv.tv/hlslive/Admin/px08241087/live/Raj_Musix/master_1.m3u8
-#EXTINF:-1 tvg-id="RajTV.in@SD",Raj TV (1080p)
-https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/2839e3d1e0f84a2e821c1708d5fdfdf0/index.m3u8
 #EXTINF:-1 tvg-id="RDXGoa.in@SD",RDX Goa (720p) [Geo-blocked]
 https://g5nl6xoalpq6-hls-live.5centscdn.com/rdxgoa/d0dbe915091d400bd8ee7f27f0791303.sdp/playlist.m3u8
 #EXTINF:-1 tvg-id="RealNewsKerala.in@SD",Real News Kerala (1080p) [Not 24/7]
@@ -649,8 +599,6 @@ https://samsung-republictv.amagi.tv/ts-ap-s1-n1/playlist/samsungin-republictv-sa
 https://stream.rojatv.cloud/rojatv/rojatv/index.m3u8
 #EXTINF:-1 tvg-id="RojaTV.in@SD",Roja TV (1080p)
 https://live.rojatv.cloud/rojatv/rojatv/index.m3u8
-#EXTINF:-1 tvg-id="RomedyNow.in@SD",Romedy Now (576p)
-http://116.90.120.151:8000/play/a0is/index.m3u8
 #EXTINF:-1 tvg-id="RongeenTV.in@SD",Rongeen TV (720p)
 https://server.thelegitpro.in/rongeentv/rongeentv/index.m3u8
 #EXTINF:-1 tvg-id="RTIndia.in@HD",RT India (1080p)
@@ -724,8 +672,6 @@ https://livetv.timeiptv.in/ShekinahNewsIndia/955ad3298db330b5ee880c2c9e6f23a0.sd
 https://airtelapp.shemaroo.com/shemarooChumbakTV/smil:shemarooChumbakTVadp.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="ShemarooMarathiBana.in@SD",Shemaroo Marathi Bana (720p)
 https://airtelapp.shemaroo.com/marathibana/smil:marathibanaadp.smil/playlist.m3u8]
-#EXTINF:-1 tvg-id="ShowBox.in@SD",ShowBox (576p)
-http://116.90.120.151:8000/play/a0k2/index.m3u8
 #EXTINF:-1 tvg-id="ShubhCinemaTV.in@SD",Shubh Cinema TV (720p)
 https://d393sxaxig6bax.cloudfront.net/out/v1/589cf2cf44bf42bb941e817a2240d62e/index.m3u8
 #EXTINF:-1 tvg-id="ShubhTV.in@SD",Shubh TV (1080p)
@@ -740,87 +686,21 @@ https://mumt03.tangotv.in/SOHAMTV/index.m3u8
 https://yuppnimrestreammum.akamaized.net/181224/smil:songdewtv.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b
 #EXTINF:-1 tvg-id="Sonic.in@SD",Sonic (576p)
 http://103.229.254.25:7001/play/a0dl/index.m3u8
-#EXTINF:-1 tvg-id="SonyAath.in@SD",Sony Aath (720p)
-http://103.161.153.165:8000/play/sonyatth/index.m3u8
-#EXTINF:-1 tvg-id="SonyBBCEarth.in@HD",Sony BBC Earth HD (1080p)
-http://116.90.120.151:8000/play/a0j1/index.m3u8
-#EXTINF:-1 tvg-id="SonyEntertainmentTelevision.in@HD",Sony Entertainment Television HD (1080p)
-http://116.90.120.151:8000/play/a0gp/index.m3u8
-#EXTINF:-1 tvg-id="SonyEntertainmentTelevision.in@HD",Sony Entertainment Television HD (720p)
-https://padmaonline.duckdns.org:8088/SETHD/index.m3u8
-#EXTINF:-1 tvg-id="SonyMax2.in@SD",Sony Max 2 (576p)
-http://116.90.120.151:8000/play/a0h0/index.m3u8
-#EXTINF:-1 tvg-id="SonyMax.in@HD",Sony Max HD (1080p)
-http://116.90.120.151:8000/play/a0jf/index.m3u8
-#EXTINF:-1 tvg-id="SonyMax.in@HD",Sony Max HD (480p)
-http://103.99.249.139/sonymax/index.m3u8
-#EXTINF:-1 tvg-id="SonyPal.in@SD",Sony Pal (576p)
-http://116.90.120.151:8000/play/a0km/index.m3u8
-#EXTINF:-1 tvg-id="SonyPix.in@HD",Sony Pix HD (1080p)
-http://103.229.254.25:7001/play/a0ed/index.m3u8
 #EXTINF:-1 tvg-id="SonySAB.in@HD",Sony SAB HD (1080p)
 http://103.229.254.25:7001/play/a0db/index.m3u8
-#EXTINF:-1 tvg-id="SonySAB.in@HD",Sony SAB HD (480p)
-http://103.99.249.139/sonysab/index.m3u8
-#EXTINF:-1 tvg-id="SonySportsTen2.in@HD",Sony Sports Ten 2 HD (1080p)
-http://103.229.254.25:7001/play/a02t/index.m3u8
 #EXTINF:-1 tvg-id="SonySportsTen3Hindi.in@SD",Sony Sports Ten 3 Hindi (576p)
 http://103.229.254.25:7001/play/a09q/index.m3u8
-#EXTINF:-1 tvg-id="SonySportsTen5.in@SD",Sony Sports Ten 5 (480p)
-http://103.99.249.139/sonyten3/index.m3u8
-#EXTINF:-1 tvg-id="SonySportsTen5.in@HD",Sony Sports Ten 5 HD (1080p)
-http://116.90.120.151:8000/play/a0hb/index.m3u8
-#EXTINF:-1 tvg-id="SonyWah.in@SD",Sony Wah (576p)
-http://116.90.120.151:8000/play/a0kt/index.m3u8
-#EXTINF:-1 tvg-id="SonyYay.in@SD",Sony Yay! (576p)
-http://116.90.120.151:8000/play/a0hf/index.m3u8
-#EXTINF:-1 tvg-id="StarBharat.in@SD",Star Bharat (576p)
-http://116.90.120.151:8000/play/a0h2/index.m3u8
 #EXTINF:-1 tvg-id="",Star Family (576p) [Not 24/7]
 http://c0.cdn.trinity-tv.net/stream/zfmjgma9zn46fa797ez9fgkw7msh9mj4tppspg23gey6mmx5fqiy7ky3jqx4uhgsfsrd8r76si8ykb2anw9442g4qkq5fzpdvwdqf5te24ixu9zrx3aesm9fzt59q5y2s8qwgbqhvf6d3z5bjy3qb2t4.m3u8
-#EXTINF:-1 tvg-id="StarGold2.in@SD",Star Gold 2 (576p)
-http://116.90.120.151:8000/play/a0gz/index.m3u8
-#EXTINF:-1 tvg-id="StarGold2.in@HD",Star Gold 2 HD (1080p)
-http://103.229.254.25:7001/play/a0d0/index.m3u8
 #EXTINF:-1 tvg-id="StarGold.in@HD",Star Gold HD (1080p)
 http://103.229.254.25:7001/play/a0dd/index.m3u8
-#EXTINF:-1 tvg-id="StarGold.in@HD",Star Gold HD (480p)
-http://103.99.249.139/stargold/index.m3u8
-#EXTINF:-1 tvg-id="StarGoldRomance.in@SD",Star Gold Romance (576p)
-http://116.90.120.151:8000/play/a0he/index.m3u8
 #EXTINF:-1 tvg-id="StarGoldSelect.in@HD",Star Gold Select HD (1080p)
 http://103.229.254.25:7001/play/a032/index.m3u8
-#EXTINF:-1 tvg-id="StarGoldThrills.in@SD",Star Gold Thrills (576p)
-http://116.90.120.151:8000/play/a0gw/index.m3u8
 #EXTINF:-1 tvg-id="StarMaaGold.in@SD",Star Maa Gold (576p)
 http://103.121.6.5:8000/play/a063/index.m3u8
-#EXTINF:-1 tvg-id="StarMoviesSelect.in@HD",Star Movies Select HD (1080p)
-http://116.90.120.151:8000/play/a0ij/index.m3u8
-#EXTINF:-1 tvg-id="StarSports1.in@HD",Star Sports 1 HD (1080p)
-http://116.90.120.151:8000/play/a0gs/index.m3u8
-#EXTINF:-1 tvg-id="StarSports1Hindi.in@SD",Star Sports 1 Hindi (576p)
-http://116.90.120.151:8000/play/a0h1/index.m3u8
-#EXTINF:-1 tvg-id="StarSports1Hindi.in@HD",Star Sports 1 Hindi HD (1080p)
-http://116.90.120.151:8000/play/a0je/index.m3u8
-#EXTINF:-1 tvg-id="StarSports2.in@HD",Star Sports 2 HD (1080p)
-http://116.90.120.151:8000/play/a0jb/index.m3u8
-#EXTINF:-1 tvg-id="StarSports2Hindi.in@SD",Star Sports 2 Hindi (576p)
-http://116.90.120.151:8000/play/a0jc/index.m3u8
-#EXTINF:-1 tvg-id="StarSports2Hindi.in@HD",Star Sports 2 Hindi HD (1080p)
-http://116.90.120.151:8000/play/a0hi/index.m3u8
-#EXTINF:-1 tvg-id="StarSports2Hindi.in@HD",Star Sports 2 Hindi HD (480p)
-http://tvn1.chowdhury-shaheb.com/starsport2/index.m3u8
-#EXTINF:-1 tvg-id="StarSports3.in@SD",Star Sports 3 (576p)
-http://103.161.153.165:8000/play/a05p/index.m3u8
-#EXTINF:-1 tvg-id="StarUtsav.in@SD",Star Utsav (576p)
-http://116.90.120.151:8000/play/a0kc/index.m3u8
-#EXTINF:-1 tvg-id="StarUtsavMovies.in@SD",Star Utsav Movies (576p)
-http://116.90.120.151:8000/play/a0ka/index.m3u8
-#EXTINF:-1 tvg-id="StarVijay.in@HD",Star Vijay HD (360p)
-http://198.27.83.207:2550/STAR_VIJAY_SD/index.m3u8
 #EXTINF:-1 tvg-id="Starnet.in@SD",Starnet (480p)
 https://5a1178b42cc03.streamlock.net/8220/8220/playlist.m3u8
-#EXTINF:-1 tvg-id="StarPlus.in@SD",StarPlus (1080p)
+#EXTINF:-1 tvg-id="StarPlus.in@HD",StarPlus HD (1080p)
 http://103.229.254.25:7001/play/a09z/index.m3u8
 #EXTINF:-1 tvg-id="SteelbirdMusic.in@SD",Steelbird Music (720p) [Not 24/7]
 https://cdn2.in/SteelbirdMusicTVhls/live.m3u8
@@ -880,8 +760,6 @@ https://d34z4embz0hjf6.cloudfront.net/out/v1/d55b3323a9f142638f897378f0b526fe/in
 https://deltatesttatasky.akamaized.net/out/i/968284.m3u8
 #EXTINF:-1 tvg-id="Travelxp.in@HD",Travelxp HD (1080p) [Geo-blocked]
 https://amg00416-amg00416c9-samsung-in-4882.playouts.now.amagi.tv/playlist/amg00416-travelxp-travelxphd-samsungin/playlist.m3u8
-#EXTINF:-1 tvg-id="Travelxp.in@HD",Travelxp HD (1080p)
-http://116.90.120.151:8000/play/a0ho/index.m3u8
 #EXTINF:-1 tvg-id="Tunes6.in@SD",Tunes 6 (720p)
 https://stream.d6-pro.com/tunes6music/live/video.m3u8
 #EXTINF:-1 tvg-id="TV5News.in@SD",TV5 News (576p)
@@ -906,8 +784,6 @@ https://mumbai-edge.smartplaytv.in/utv/index.m3u8
 https://yuppmedtaorire.akamaized.net/v1/master/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/v6news_nim_https/140622/v6news/playlist.m3u8
 #EXTINF:-1 tvg-id="VaanavilTV.in@SD",Vaanavil TV (720p)
 https://6n3yope4d9ok-hls-live.5centscdn.com/vaanavil/TV.stream/playlist.m3u8
-#EXTINF:-1 tvg-id="VaanavilTV.in@SD",Vaanavil TV (360p)
-http://198.27.83.207:2550/VAANAVIL_SD/index.m3u8
 #EXTINF:-1 tvg-id="",Vathanam TV
 http://95.216.167.183:5080/LiveApp/streams/443106610169904881506470.m3u8
 #EXTINF:-1 tvg-id="VCV.in@SD",VCV (720p) [Not 24/7]
@@ -969,8 +845,6 @@ http://103.229.254.25:7001/play/a070/index.m3u8
 https://vg-zeefta.akamaized.net/ptnr-yupptv/title-zeehindustan/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/96bbab12-582e-4540-af70-510ab6824581/main.m3u8
 #EXTINF:-1 tvg-id="ZeeBiharJharkhand.in@SD",Zee Bihar Jharkhand (720p)
 https://vg-zeefta.akamaized.net/ptnr-yupptv/title-zeebiharjharkhand/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/28077955-07d7-4ae2-8b11-9f318cd69420/main.m3u8
-#EXTINF:-1 tvg-id="ZeeBiskope.in@SD",Zee Biskope (576p)
-http://116.90.120.151:8000/play/a0kf/index.m3u8
 #EXTINF:-1 tvg-id="ZeeBollymovies.in@SD",Zee Bollymovies (1080p) [Geo-blocked]
 https://amg17931-zee-amg17931c8-samsung-th-6526.playouts.now.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="ZeeBollymovies.in@Australia",Zee Bollymovies Australia (1080p) [Geo-blocked]
@@ -985,16 +859,12 @@ http://103.229.254.25:7001/play/a09r/index.m3u8
 https://dwby15d04agvq.cloudfront.net/index_1.m3u8
 #EXTINF:-1 tvg-id="ZeeCafe.in@HD",Zee Cafe HD (1080p)
 http://103.229.254.25:7001/play/a0cx/index.m3u8
-#EXTINF:-1 tvg-id="ZeeCafe.in@HD",Zee Cafe HD (1080p)
-http://116.90.120.151:8000/play/a0hn/index.m3u8
 #EXTINF:-1 tvg-id="ZeeCineClassic.in@SD",Zee Cine Classic (1080p)
 https://amg00862-amg00862c8-amgplt0173.playout.now3.amagi.tv/playlist/amg00862-amg00862c8-amgplt0173/playlist.m3u8
 #EXTINF:-1 tvg-id="ZeeCinema.in@APAC",Zee Cinema APAC (1080p) [Geo-blocked]
 https://amg17931-zee-amg17931c5-samsung-au-8873.playouts.now.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="ZeeCinema.in@APAC",Zee Cinema APAC (1080p) [Geo-blocked]
 https://amg17931-zee-amg17931c5-samsung-th-5696.playouts.now.amagi.tv/playlist/amg17931-asiatvusaltdfast-zeecinema-samsungth/playlist.m3u8
-#EXTINF:-1 tvg-id="ZeeCinema.in@HD",Zee Cinema HD (480p)
-http://103.99.249.139/zeecinema/index.m3u8
 #EXTINF:-1 tvg-id="ZeeClassic.in@SD",Zee Classic (576p)
 http://103.229.254.25:7001/play/a09w/index.m3u8
 #EXTINF:-1 tvg-id="ZeeComedyNation.in@HD",Zee Comedy Nation (1080p)
@@ -1019,10 +889,6 @@ https://vg-zeefta.akamaized.net/ptnr-yupptv/title-zeepunjabharyanahima/v1/master
 https://vg-zeefta.akamaized.net/ptnr-yupptv/title-zeerajashthannews/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/8e864b9a-1681-41a0-99a6-387490bc5b24/main.m3u8
 #EXTINF:-1 tvg-id="ZeeSouthFlix.in@HD",Zee South Flix (1080p)
 https://amg00862-amg00862c9-amgplt0173.playout.now3.amagi.tv/playlist/amg00862-amg00862c9-amgplt0173/playlist.m3u8
-#EXTINF:-1 tvg-id="ZeeTalkies.in@HD",Zee Talkies HD (1080p)
-http://116.90.120.151:8000/play/a0io/index.m3u8
-#EXTINF:-1 tvg-id="ZeeTamil.in@SD",Zee Tamil (576p)
-http://103.161.153.165:8000/play/a05z/index.m3u8
 #EXTINF:-1 tvg-id="ZeeTeluguNews.in@SD",Zee Telugu News (720p)
 https://d116gfrn8orazi.cloudfront.net/index.m3u8?akes=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3NjcxOTc5NzJ9.O4qmdMPbHwKrCg6hFXvD70vjSPWKQd0a7NrjmFdeMB8
 #EXTINF:-1 tvg-id="ZeeUttarPradeshUttarakhand.in@SD",Zee Uttar Pradesh/Uttarakhand (720p)
@@ -1049,25 +915,586 @@ https://cc-yw7ztecy8do3q.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da6
 https://live1.ottlive.co.in/spokesman/spokesman/index.m3u8
 #EXTINF:-1 tvg-id="OnTV.in@SD",On TV (576p)
 https://mumt03.tangotv.in/ONTV/index.m3u8
-#EXTINF:-1 tvg-id="StarSports1Tamil.in@SD",Star Sports 1 Tamil (576p)
-http://ptu.ridsys.in/riptv/live/STAR_SPORTS_TAMIL/index.m3u8
 #EXTINF:-1 tvg-id="VillageTV.in@SD",Village TV (576p)
 https://villagetv.applelive.in/villagetv/villagetv/index.m3u8
-#EXTINF:-1 tvg-id="Nickelodeon.in@SD",Nickelodeon (576p)
-http://ptu.ridsys.in/riptv/live/NICK/index.m3u8
-#EXTINF:-1 tvg-id="ColorsTamil.in@HD",Colors Tamil HD (1080p)
-http://ptu.ridsys.in/riptv/live/COLORS_TAMIL/index.m3u8
+#EXTINF:-1 tvg-id="TheMovieClub.in@Plus2",The Movie Club +2 (1080p)
+https://d3gnyty2vddhsg.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-ytipwjqub3kf8/TMC2_IN.m3u8?ads.ads_cdn=cf&ads.cdn=cf
 #EXTINF:-1 tvg-id="DisneyChannel.in@SD",Disney Channel (576p)
-http://ptu.ridsys.in/riptv/live/DISNEY_CHANNEL/index.m3u8
-#EXTINF:-1 tvg-id="ZeeThirai.in@HD",Zee Thirai HD (1080p)
-http://ptu.ridsys.in/riptv/live/ZEE_THIRAI/index.m3u8
-#EXTINF:-1 tvg-id="StarMovies.in@HD",Star Movies HD (1080p)
-http://ptu.ridsys.in/riptv/live/STAR_MOVIES_HD/index.m3u8
-#EXTINF:-1 tvg-id="VijaySuper.in@SD",Vijay Super (576p)
-http://ptu.ridsys.in/riptv/live/VIJAY_SUPER/index.m3u8
+http://ajkiptv.ridsys.in/riptv/live/DISNEY_CHANNEL/index.m3u8
 #EXTINF:-1 tvg-id="StarVijay.in@SD",Star Vijay (576p)
-http://ptu.ridsys.in/riptv/live/STAR_VIJAY/index.m3u8
+http://ptuf.ridsys.in/riptv/live/STAR_VIJAY/index.m3u8
+#EXTINF:-1 tvg-id="VijaySuper.in@SD",Vijay Super (576p)
+http://ptuf.ridsys.in/riptv/live/VIJAY_SUPER/index.m3u8
+#EXTINF:-1 tvg-id="VijaySuper.in@SD",Vijay Super (576p)
+http://103.157.248.140:8000/play/a05l/index.m3u8
+#EXTINF:-1 tvg-id="StarSports2Hindi.in@HD",Star Sports 2 Hindi HD (1080p)
+http://103.157.248.140:8000/play/a01m/index.m3u8
+#EXTINF:-1 tvg-id="StarMovies.in@HD",Star Movies HD (1080p)
+http://103.157.248.140:8000/play/a01t/index.m3u8
+#EXTINF:-1 tvg-id="StarMovies.in@HD",Star Movies HD (1080p)
+http://ptuf.ridsys.in/riptv/live/STAR_MOVIES_HD/index.m3u8
+#EXTINF:-1 tvg-id="RomedyNow.in@SD",Romedy Now (576p)
+http://103.157.248.140:8000/play/a015/index.m3u8
+#EXTINF:-1 tvg-id="NationalGeographicWild.in@HD",National Geographic Wild HD (1080p)
+http://103.157.248.140:8000/play/a010/index.m3u8
+#EXTINF:-1 tvg-id="NationalGeographic.in@HD",National Geographic HD (1080p)
+http://103.157.248.140:8000/play/a012/index.m3u8
+#EXTINF:-1 tvg-id="ZeeTV.in@SD",Zee TV (1080p)
+http://103.229.254.25:7001/play/a0cs/index.m3u8
+#EXTINF:-1 tvg-id="IsaiAruvi.in@SD",Isai Aruvi (576p)
+http://ptuf.ridsys.in/riptv/live/KALAIGNAR_ISAI_ARUVI/index.m3u8
+#EXTINF:-1 tvg-id="SirippoliTV.in@SD",Sirippoli TV (576p)
+http://ptuf.ridsys.in/riptv/live/KALAIGNAR_SIRIPOLI/index.m3u8
+#EXTINF:-1 tvg-id="DivyavaniTV.in@SD",Divyavani TV (576p)
+https://mumbai-edge.smartplaytv.in/Divyavani/index.m3u8
+#EXTINF:-1 tvg-id="ZeeCinemalu.in@HD",Zee Cinemalu HD (1080p)
+https://mumbai-edge.smartplaytv.in/ZeeCinemaluHD/index.m3u8
+#EXTINF:-1 tvg-id="ZeeTelugu.in@HD",Zee Telugu HD (1080p)
+https://mumbai-edge.smartplaytv.in/ZeeTeluguHD/index.m3u8
+#EXTINF:-1 tvg-id="BigTV24x7.in@SD",Big TV 24x7 (576i)
+https://d2gvyg6lvauoko.cloudfront.net/230226/bigtvmalyalam/chunks.m3u8
+#EXTINF:-1 tvg-id="NewsMalayalam24x7.in@SD",News Malayalam 24x7 (576p)
+https://cdn-3.pishow.tv/live/1629/master.m3u8
+#EXTINF:-1 tvg-id="NewsTamil24x7.in@SD",News Tamil 24x7 (576p)
+https://cdn-3.pishow.tv/live/1433/master.m3u8
+#EXTINF:-1 tvg-id="AsianetNews.in@SD",Asianet News (1080p)
+https://asianet-samsung.vgcdn.net/ptnr-monitoring/vglive-sk-906908/playlist.m3u8
+#EXTINF:-1 tvg-id="NewsMalayalam24x7.in@SD",News Malayalam 24x7 (576i)
+https://mumt03.tangotv.in/NEWSMALAYALAM24X7/index.m3u8
+#EXTINF:-1 tvg-id="MathrubhumiNews.in@SD",Mathrubhumi News
+https://mathrubhumicdn.vidgyor.com/mathrubhumi-origin/liveabr/playlist.m3u8
+#EXTINF:-1 tvg-id="ZeeNews.in@SD",Zee News (1080p)
+https://dt3lrqnyx3dks.cloudfront.net/index.m3u8
+#EXTINF:-1 tvg-id="BigTV24x7.in@SD",Big TV 24x7 (576i)
+https://d2gvyg6lvauoko.cloudfront.net/230226/bigtvmalyalam/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b
+#EXTINF:-1 tvg-id="SaiTV.in@SD",Sai TV (576p)
+https://mumt03.tangotv.in/SAITVTAMILDEVOTIONAL/index.m3u8
+#EXTINF:-1 tvg-id="VTVNews.in@SD",VTV News (576p)
+https://mumt04.tangotv.in/VTV/index.m3u8
+#EXTINF:-1 tvg-id="PragNews.in@SD",Prag News (576p)
+https://mumt05.tangotv.in/PRAGNEWS/index.m3u8
+#EXTINF:-1 tvg-id="DDSports.in@SD",DD Sports SD (720p)
+http://103.213.31.109:90/ZeeAnmolCinema2/playlist.m3u8
+#EXTINF:-1 tvg-id="NDTVIndia.in@SD",NDTV India (720p)
+http://103.213.31.109:90/StarUtsavMovies/playlist.m3u8
+#EXTINF:-1 tvg-id="EpicMusic.in@SD",Epic Music (720p)
+http://103.213.31.109:90/ShowBox/playlist.m3u8
+#EXTINF:-1 tvg-id="ShemarooUmang.in@SD",Shemaroo Umang (720p)
+http://103.213.31.109:90/ShemarooUmang/playlist.m3u8
+#EXTINF:-1 tvg-id="SangeetBhojpuri.in@SD",Sangeet Bhojpuri (1080p)
+http://103.213.31.109:90/SangeetBhojpuri/playlist.m3u8
+#EXTINF:-1 tvg-id="ManoranjanMovies.in@SD",Manoranjan Movies (720p)
+http://103.213.31.109:90/ManoranjanMovies/playlist.m3u8
+#EXTINF:-1 tvg-id="ManoranjanTV.in@SD",Manoranjan TV (720p)
+http://103.213.31.109:90/ManoranjanTv/playlist.m3u8
+#EXTINF:-1 tvg-id="GoldminesMovies.in@SD",Goldmines Movies (720p)
+http://103.213.31.109:90/GoldminesMovies/playlist.m3u8
+#EXTINF:-1 tvg-id="GTCPunjabi.in@SD",GTC Punjabi (720p)
+http://103.213.31.109:90/FilmachiBhojpuri/playlist.m3u8
+#EXTINF:-1 tvg-id="DDIndia.in@SD",DD India (720p)
+http://103.213.31.109:90/DDIndia/playlist.m3u8
+#EXTINF:-1 tvg-id="DDBharati.in@SD",DD Bharati (720p)
+http://103.213.31.109:90/DDBharati/playlist.m3u8
+#EXTINF:-1 tvg-id="Dangal2.in@SD",Dangal 2 (720p)
+http://103.213.31.109:90/Dangal2/playlist.m3u8
+#EXTINF:-1 tvg-id="DangalTV.in@SD",Dangal TV (720p)
+http://103.213.31.109:90/Dangal/playlist.m3u8
+#EXTINF:-1 tvg-id="ColorsCineplexBollywood.in@SD",Colors Cineplex Bollywood (564p)
+http://103.213.31.109:90/CineplxBollywood/playlist.m3u8
+#EXTINF:-1 tvg-id="ShemarooJosh.in@SD",Shemaroo Josh (720p)
+http://103.213.31.109:90/ChumbakTv/playlist.m3u8
+#EXTINF:-1 tvg-id="BhojpuriCinema.in@SD",Bhojpuri Cinema (720p)
+http://103.213.31.109:90/BhojpuriCinema/playlist.m3u8
+#EXTINF:-1 tvg-id="EpicBharat.in@SD",Epic Bharat (720p)
+http://103.213.31.109:90/BigMagic/playlist.m3u8
+#EXTINF:-1 tvg-id="B4UMovies.in@India",B4U Movies (720p)
+http://103.213.31.109:90/B4UMovies/playlist.m3u8
+#EXTINF:-1 tvg-id="B4UKadak.in@SD",B4U Kadak (720p)
+http://103.213.31.109:90/B4UKadak/playlist.m3u8
+#EXTINF:-1 tvg-id="B4UBhojpuri.in@SD",B4U Bhojpuri (720p)
+http://103.213.31.109:90/B4UBhojpuri/playlist.m3u8
+#EXTINF:-1 tvg-id="PTCPunjabi.in@SD",PTC Punjabi (720p)
+http://103.213.31.109:90/ActionCinema/playlist.m3u8
+#EXTINF:-1 tvg-id="ABPNews.in@SD",ABP News (720p)
+http://103.213.31.109:90/ABPNews/playlist.m3u8
+#EXTINF:-1 tvg-id="Aastha.in@SD",Aastha (720p)
+http://103.213.31.109:90/AasthaSD/playlist.m3u8
+#EXTINF:-1 tvg-id="AajTak.in@SD",Aaj Tak (1080p)
+http://103.213.31.109:90/AajtakHD/playlist.m3u8
+#EXTINF:-1 tvg-id="ChardiklaTimeTV.in@SD",Chardikla Time TV
+https://cdn-4.pishow.tv/live/1627/master.m3u8
+#EXTINF:-1 tvg-id="DDJharkhand.in@SD",DD Jharkhand
+https://cdn-1.pishow.tv/live/1617/master.m3u8
+#EXTINF:-1 tvg-id="9XTashan.in@SD",9X Tashan
+https://cdn-2.pishow.tv/live/1613/master.m3u8
+#EXTINF:-1 tvg-id="SairamTV.in@SD",Sairam TV
+https://cdn-3.pishow.tv/live/1611/master.m3u8
+#EXTINF:-1 tvg-id="SVBC4.in@SD",SVBC 4
+https://cdn-2.pishow.tv/live/1607/master.m3u8
+#EXTINF:-1 tvg-id="PTCPunjabi.in@SD",PTC Punjabi
+https://cdn-2.pishow.tv/live/1604/master.m3u8
+#EXTINF:-1 tvg-id="OdishaTV.in@SD",Odisha TV
+https://cdn-2.pishow.tv/live/1600/master.m3u8
+#EXTINF:-1 tvg-id="MahaPunjabi.in@SD",Maha Punjabi
+https://cdn-4.pishow.tv/live/1521/master.m3u8
+#EXTINF:-1 tvg-id="SudarshanNews.in@SD",Sudarshan News
+https://cdn-2.pishow.tv/live/1516/master.m3u8
+#EXTINF:-1 tvg-id="ReporterTV.in@SD",Reporter TV
+https://cdn-2.pishow.tv/live/1510/master.m3u8
+#EXTINF:-1 tvg-id="PTCSimran.in@SD",PTC Simran
+https://cdn-6.pishow.tv/live/1503/master.m3u8
+#EXTINF:-1 tvg-id="PTCMusic.in@SD",PTC Music
+https://cdn-3.pishow.tv/live/1501/master.m3u8
+#EXTINF:-1 tvg-id="News7Tamil.in@SD",News 7 Tamil
+https://cdn-3.pishow.tv/live/1498/master.m3u8
+#EXTINF:-1 tvg-id="NewsNation.in@SD",News Nation
+https://cdn-2.pishow.tv/live/1493/master.m3u8
+#EXTINF:-1 tvg-id="Nepal1.in@SD",Nepal 1
+https://cdn-6.pishow.tv/live/1490/master.m3u8
+#EXTINF:-1 tvg-id="MazhavilManorama.in@SD",Mazhavil Manorama
+https://cdn-3.pishow.tv/live/1479/master.m3u8
+#EXTINF:-1 tvg-id="ManoranjanPrime.in@SD",Manoranjan Prime
+https://cdn-4.pishow.tv/live/1474/master.m3u8
+#EXTINF:-1 tvg-id="KashishNews.in@SD",Kashish News
+https://cdn-7.pishow.tv/live/1471/master.m3u8
+#EXTINF:-1 tvg-id="KalingaTV.in@SD",Kalinga TV
+https://cdn-4.pishow.tv/live/1470/master.m3u8
+#EXTINF:-1 tvg-id="JanamTV.in@SD",Janam TV
+https://cdn-3.pishow.tv/live/1466/master.m3u8
+#EXTINF:-1 tvg-id="IshwarBhaktiTV.in@SD",Ishwar Bhakti TV
+https://cdn-2.pishow.tv/live/1464/master.m3u8
+#EXTINF:-1 tvg-id="GSTV.in@SD",GS TV
+https://cdn-4.pishow.tv/live/1462/master.m3u8
+#EXTINF:-1 tvg-id="DharmSandesh.in@SD",Dharm Sandesh
+https://cdn-2.pishow.tv/live/1455/master.m3u8
+#EXTINF:-1 tvg-id="Aastha.in@SD",Aastha
+https://cdn-1.pishow.tv/live/1454/master.m3u8
+#EXTINF:-1 tvg-id="NambikkaiTV.in@SD",Nambikkai TV
+https://cdn-3.pishow.tv/live/1389/master.m3u8
+#EXTINF:-1 tvg-id="MadhaTV.in@SD",Madha TV
+https://cdn-3.pishow.tv/live/1265/master.m3u8
+#EXTINF:-1 tvg-id="PuthiyaThalaimurai.in@SD",Puthiya Thalaimurai
+https://cdn-3.pishow.tv/live/1261/master.m3u8
+#EXTINF:-1 tvg-id="PolimerNews.in@SD",Polimer News
+https://cdn-3.pishow.tv/live/1245/master.m3u8
+#EXTINF:-1 tvg-id="KaumudyTV.in@SD",Kaumudy TV
+https://cdn-3.pishow.tv/live/1237/master.m3u8
+#EXTINF:-1 tvg-id="SaiTV.in@SD",Sai TV
+https://cdn-3.pishow.tv/live/1235/master.m3u8
+#EXTINF:-1 tvg-id="GangaurTV.in@SD",Gangaur TV
+https://cdn-2.pishow.tv/live/1221/master.m3u8
+#EXTINF:-1 tvg-id="BharatExpress.in@SD",Bharat Express
+https://cdn-2.pishow.tv/live/1139/master.m3u8
+#EXTINF:-1 tvg-id="MoonTV.in@SD",Moon TV
+https://cdn-4.pishow.tv/live/1121/master.m3u8
+#EXTINF:-1 tvg-id="RepublicBharat.in@SD",Republic Bharat
+https://cdn-2.pishow.tv/live/1053/master.m3u8
+#EXTINF:-1 tvg-id="IndiaTV.in@SD",India TV
+https://cdn-2.pishow.tv/live/1043/master.m3u8
+#EXTINF:-1 tvg-id="BhojpuriCinema.in@SD",Bhojpuri Cinema
+https://cdn-4.pishow.tv/live/1033/master.m3u8
+#EXTINF:-1 tvg-id="RongeenTV.in@SD",Rongeen TV
+https://cdn-4.pishow.tv/live/1029/master.m3u8
+#EXTINF:-1 tvg-id="BalleBalle.in@SD",Balle Balle
+https://cdn-4.pishow.tv/live/987/master.m3u8
+#EXTINF:-1 tvg-id="ShubhsandeshTV.in@SD",Shubhsandesh TV
+https://cdn-2.pishow.tv/live/457/master.m3u8
+#EXTINF:-1 tvg-id="PTCPunjabiGold.in@SD",PTC Punjabi Gold
+https://cdn-7.pishow.tv/live/450/master.m3u8
+#EXTINF:-1 tvg-id="B4UMovies.in@India",B4U Movies
+https://cdn-2.pishow.tv/live/419/master.m3u8
+#EXTINF:-1 tvg-id="SakshiTV.in@SD",Sakshi TV
+https://cdn-1.pishow.tv/live/409/master.m3u8
+#EXTINF:-1 tvg-id="MahaaNews.in@SD",Mahaa News
+https://cdn-1.pishow.tv/live/401/master.m3u8
+#EXTINF:-1 tvg-id="TV5News.in@SD",TV5 News
+https://cdn-1.pishow.tv/live/387/master.m3u8
+#EXTINF:-1 tvg-id="NTVTelugu.in@SD",NTV Telugu
+https://cdn-1.pishow.tv/live/383/master.m3u8
+#EXTINF:-1 tvg-id="RepublicKannada.in@SD",Republic Kannada
+https://cdn-3.pishow.tv/live/298/master.m3u8
+#EXTINF:-1 tvg-id="SubhavaarthaTV.in@SD",Subhavaartha TV
+https://cdn-1.pishow.tv/live/278/master.m3u8
+#EXTINF:-1 tvg-id="NewsIndia24x7.in@SD",News India 24x7
+https://cdn-3.pishow.tv/live/273/master.m3u8
+#EXTINF:-1 tvg-id="RepublicTV.in@SD",Republic TV
+https://cdn-2.pishow.tv/live/271/master.m3u8
+#EXTINF:-1 tvg-id="RepublicBangla.in@SD",Republic Bangla
+https://cdn-4.pishow.tv/live/270/master.m3u8
+#EXTINF:-1 tvg-id="AasthaTelugu.in@SD",Aastha Telugu
+https://cdn-1.pishow.tv/live/262/master.m3u8
+#EXTINF:-1 tvg-id="Enterr10Bangla.in@SD",Enterr 10 Bangla
+https://cdn-4.pishow.tv/live/241/master.m3u8
+#EXTINF:-1 tvg-id="AasthaKannada.in@SD",Aastha Kannada
+https://cdn-3.pishow.tv/live/234/master.m3u8
+#EXTINF:-1 tvg-id="B4UKadak.in@SD",B4U Kadak
+https://cdn-2.pishow.tv/live/227/master.m3u8
+#EXTINF:-1 tvg-id="AyushTV.in@SD",Ayush TV
+https://cdn-6.pishow.tv/live/221/master.m3u8
+#EXTINF:-1 tvg-id="SansadTV2.in@SD",Sansad TV 2
+https://cdn-2.pishow.tv/live/39/master.m3u8
+#EXTINF:-1 tvg-id="DDBangla.in@SD",DD Bangla
+https://cdn-4.pishow.tv/live/37/master.m3u8
+#EXTINF:-1 tvg-id="DDArunPrabha.in@SD",DD Arun Prabha
+https://cdn-4.pishow.tv/live/32/master.m3u8
+#EXTINF:-1 tvg-id="DDSahyadri.in@SD",DD Sahyadri
+https://cdn-3.pishow.tv/live/30/master.m3u8
+#EXTINF:-1 tvg-id="DDChandana.in@SD",DD Chandana
+https://cdn-3.pishow.tv/live/28/master.m3u8
+#EXTINF:-1 tvg-id="DDMalayalam.in@SD",DD Malayalam
+https://cdn-3.pishow.tv/live/27/master.m3u8
+#EXTINF:-1 tvg-id="DDTamil.in@SD",DD Tamil
+https://cdn-2.pishow.tv/live/26/master.m3u8
+#EXTINF:-1 tvg-id="DDPunjabi.in@SD",DD Punjabi
+https://cdn-4.pishow.tv/live/24/master.m3u8
+#EXTINF:-1 tvg-id="DDKashir.in@SD",DD Kashir
+https://cdn-6.pishow.tv/live/16/master.m3u8
+#EXTINF:-1 tvg-id="DDNews.in@SD",DD News
+https://cdn-2.pishow.tv/live/12/master.m3u8
+#EXTINF:-1 tvg-id="SafariTV.in@SD",Safari TV
+https://cdn-6.pishow.tv/live/1513/master.m3u8
+#EXTINF:-1 tvg-id="News24MPChhattisgarh.in@SD",News 24 MP & Chhattisgarh (576p)
+https://mumt04.tangotv.in/NEWS24MPCG/index.m3u8
+#EXTINF:-1 tvg-id="GospelTVIndia.in@SD",Gospel TV India (720p)
+https://server.livelegitpro.in:9899/gospeltv/index.m3u8
+#EXTINF:-1 tvg-id="ShemarooFilmiGaane.in@HD",Shemaroo Filmi Gaane (1080p)
+http://103.213.31.109:90/ShemarooFilmiGaane/playlist.m3u8
+#EXTINF:-1 tvg-id="SamacharPlus.in@SD",Samachar Plus
+https://cdn-2.pishow.tv/live/269/master.m3u8
+#EXTINF:-1 tvg-id="B4UMusic.in@India",B4U Music (576p)
+http://103.213.31.109:90/B4UMusic/playlist.m3u8
+#EXTINF:-1 tvg-id="SonySportsTen4.in@Telugu",Sony Sports Ten 4 Telugu (1080p)
+https://sl.vodep39240327.workers.dev/channel/SONY%20TEN%204%20HD.m3u8
+#EXTINF:-1 tvg-id="SonySportsTen4.in@Tamil",Sony Sports Ten 4 (1080p) [Geo-blocked]
+https://sl.vodep39240327.workers.dev/channel/SONY%20TEN%204.m3u8
+#EXTINF:-1 tvg-id="DharsanTV.in@SD",Dharsan TV (720p)
+https://cable91tataplay.akamaized.net/live/dharshantv/index.m3u8
+#EXTINF:-1 tvg-id="HebronTV.in@SD",Hebron TV (1080p)
+https://account20.livebox.co.in/charleshls/live.m3u8
+#EXTINF:-1 tvg-id="FlowersTV.in@SD",Flowers TV (576p)
+http://103.72.101.252:8080/live/634.m3u8
+#EXTINF:-1 tvg-id="Zing.in@SD",Zing! (576p)
+http://103.72.101.252:8080/live/585.m3u8
+#EXTINF:-1 tvg-id="NickJr.in@SD",Nick Jr. (576p)
+http://103.72.101.252:8080/live/544.m3u8
+#EXTINF:-1 tvg-id="Nickelodeon.in@SD",Nickelodeon (576p)
+http://103.72.101.252:8080/live/545.m3u8
+#EXTINF:-1 tvg-id="RajPariwar.in@SD",Raj Pariwar (576p)
+http://103.72.101.252:8080/live/533.m3u8
+#EXTINF:-1 tvg-id="ZeeAction.in@SD",Zee Action (576p)
+http://103.72.101.252:8080/live/488.m3u8
+#EXTINF:-1 tvg-id="AndTV.in@HD",&TV HD (1080p)
+http://103.72.101.252:8080/live/472.m3u8
+#EXTINF:-1 tvg-id="ZeeMarathi.in@SD",Zee Marathi (576p)
+http://103.72.101.252:8080/live/445.m3u8
+#EXTINF:-1 tvg-id="JayaMax.in@SD",Jaya Max (576p)
+http://103.72.101.252:8080/live/420.m3u8
+#EXTINF:-1 tvg-id="JayaTV.in@HD",Jaya TV (1080p)
+http://103.72.101.252:8080/live/419.m3u8
+#EXTINF:-1 tvg-id="JMovie.in@SD",J Movie (576p)
+http://103.72.101.252:8080/live/417.m3u8
+#EXTINF:-1 tvg-id="ZeeYuva.in@SD",Zee Yuva (576p)
+http://103.72.101.252:8080/live/414.m3u8
+#EXTINF:-1 tvg-id="ZeeCinemalu.in@SD",Zee Cinemalu (576p)
+http://103.72.101.252:8080/live/413.m3u8
+#EXTINF:-1 tvg-id="EVidya4.in@SD",E-Vidya 4 (576p)
+http://103.72.101.252:8080/live/406.m3u8
+#EXTINF:-1 tvg-id="EVidya3.in@SD",E-Vidya 3 (576p)
+http://103.72.101.252:8080/live/405.m3u8
+#EXTINF:-1 tvg-id="EVidya7.in@SD",E-Vidya 7 (576p)
+http://103.72.101.252:8080/live/404.m3u8
+#EXTINF:-1 tvg-id="SwayamPrabha20.in@SD",Swayam Prabha 20 (576p)
+http://103.72.101.252:8080/live/403.m3u8
+#EXTINF:-1 tvg-id="EVidya2.in@SD",E-Vidya 2 (576p)
+http://103.72.101.252:8080/live/402.m3u8
+#EXTINF:-1 tvg-id="SwayamPrabha19.in@SD",Swayam Prabha 19 (576p)
+http://103.72.101.252:8080/live/401.m3u8
+#EXTINF:-1 tvg-id="EVidya1.in@SD",E-Vidya 1 (576p)
+http://103.72.101.252:8080/live/400.m3u8
+#EXTINF:-1 tvg-id="StarSuvarna.in@HD",Star Suvarna HD (1080p)
+#EXTVLCOPT:http-referrer=https://tulnit.com
+https://anet.keralive.workers.dev/v1/master/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/suvarnatv_live_https/index.m3u8
+#EXTINF:-1 tvg-id="StarPravah.in@HD",Star Pravah HD (1080p)
+#EXTVLCOPT:http-referrer=https://tulnit.com
+https://anet.keralive.workers.dev/v1/master/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/starpravah_live_https/index.m3u8
+#EXTINF:-1 tvg-id="StarJalsha.in@HD",Star Jalsha HD (1080p)
+#EXTVLCOPT:http-referrer=https://tulnit.com
+https://anet.keralive.workers.dev/v1/master/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/starjalsha_live_https/index.m3u8
+#EXTINF:-1 tvg-id="ColorsRishteyAsia.in@SD",Colors Rishtey Asia (1080p)
+http://103.72.101.252:8080/live/279.m3u8
+#EXTINF:-1 tvg-id="MTV.in@SD",MTV (1080p)
+http://103.72.101.252:8080/live/248.m3u8
+#EXTINF:-1 tvg-id="ColorsGujarati.in@SD",Colors Gujarati (1080p)
+http://103.72.101.252:8080/live/196.m3u8
+#EXTINF:-1 tvg-id="Andpictures.in@HD",&pictures HD (1080p)
+http://103.72.101.252:8080/live/185.m3u8
+#EXTINF:-1 tvg-id="ZeeTV.in@HD",Zee TV HD (1080p)
+http://103.72.101.252:8080/live/167.m3u8
+#EXTINF:-1 tvg-id="ZeeCinema.in@HD",Zee Cinema HD (1080p)
+http://103.72.101.252:8080/live/165.m3u8
+#EXTINF:-1 tvg-id="Colors.in@HD",Colors HD (1080p)
+http://103.72.101.252:8080/live/144.m3u8
+#EXTINF:-1 tvg-id="NTVTelugu.in@SD",NTV Telugu (1080p)
+https://mumbai-edge.smartplaytv.in/NTVTelugu/index.m3u8
+#EXTINF:-1 tvg-id="SonyYay.in@SD",Sony Yay! (1080p) [Geo-blocked]
+https://sl.vodep39240327.workers.dev/channel/SONY%20YAY.m3u8
+#EXTINF:-1 tvg-id="SonyMarathi.in@SD",Sony Marathi (1080p) [Geo-blocked]
+https://sl.vodep39240327.workers.dev/channel/SONY%20MARATHI.m3u8
+#EXTINF:-1 tvg-id="SonyBBCEarth.in@HD",Sony BBC Earth HD English (1080p) [Geo-blocked]
+https://sl.vodep39240327.workers.dev/channel/SONY%20BBC%20EARTH%20HD.m3u8
+#EXTINF:-1 tvg-id="SonyAath.in@SD",Sony Aath (1080p) [Geo-blocked]
+https://sl.vodep39240327.workers.dev/channel/SONY%20AATH.m3u8
+#EXTINF:-1 tvg-id="SonyPix.in@HD",Sony Pix HD (1080p) [Geo-blocked]
+https://sl.vodep39240327.workers.dev/channel/SONY%20PIX%20HD.m3u8
+#EXTINF:-1 tvg-id="SonyWah.in@SD",Sony Wah (1080p) [Geo-blocked]
+https://sl.vodep39240327.workers.dev/channel/SONY%20WAH.m3u8
+#EXTINF:-1 tvg-id="SonyMax2.in@SD",Sony Max 2 (1080p) [Geo-blocked]
+https://sl.vodep39240327.workers.dev/channel/SONY%20MAX%202.m3u8
+#EXTINF:-1 tvg-id="SonyMax.in@SD",Sony Max (1080p) [Geo-blocked]
+https://sl.vodep39240327.workers.dev/channel/SONY%20MAX.m3u8
+#EXTINF:-1 tvg-id="SonyMax.in@HD",Sony Max HD (1080p) [Geo-blocked]
+https://sl.vodep39240327.workers.dev/channel/SONY%20MAX%20HD.m3u8
+#EXTINF:-1 tvg-id="SonySportsTen5.in@SD",Sony Sports Ten 5 (1080p) [Geo-blocked]
+https://sl.vodep39240327.workers.dev/channel/SONY%20TEN%205.m3u8
+#EXTINF:-1 tvg-id="SonySportsTen5.in@HD",Sony Sports Ten 5 HD (1080p) [Geo-blocked]
+https://sl.vodep39240327.workers.dev/channel/SONY%20TEN%205%20HD.m3u8
+#EXTINF:-1 tvg-id="SonySportsTen1.in@SD",Sony Sports Ten 1 (1080p) [Geo-blocked]
+https://sl.vodep39240327.workers.dev/channel/SONY%20TEN%201.m3u8
+#EXTINF:-1 tvg-id="SonySportsTen1.in@HD",Sony Sports Ten 1 HD (1080p) [Geo-blocked]
+https://sl.vodep39240327.workers.dev/channel/SONY%20TEN%201%20HD.m3u8
+#EXTINF:-1 tvg-id="SonySportsTen2.in@SD",Sony Sports Ten 2 (1080p) [Geo-blocked]
+https://sl.vodep39240327.workers.dev/channel/SONY%20TEN%202.m3u8
+#EXTINF:-1 tvg-id="SonySportsTen2.in@HD",Sony Sports Ten 2 HD (1080p) [Geo-blocked]
+https://sl.vodep39240327.workers.dev/channel/SONY%20TEN%202%20HD.m3u8
+#EXTINF:-1 tvg-id="SonySportsTen3Hindi.in@SD",Sony Sports Ten 3 Hindi (1080p) [Geo-blocked]
+https://sl.vodep39240327.workers.dev/channel/SONY%20TEN%203.m3u8
+#EXTINF:-1 tvg-id="SonySportsTen3Hindi.in@HD",Sony Sports Ten 3 Hindi HD (1080p) [Geo-blocked]
+https://sl.vodep39240327.workers.dev/channel/SONY%20TEN%203%20HD.m3u8
+#EXTINF:-1 tvg-id="HungamaTV.in@SD",Hungama TV (576p)
+https://mini.allinonereborn.fun/tata.php?id=11647
+#EXTINF:-1 tvg-id="StarPlus.in@HD",StarPlus HD (1080p)
+http://103.253.18.58:8000/play/a00l
+#EXTINF:-1 tvg-id="StarBharat.in@SD",Star Bharat (576p)
+http://103.253.18.58:8000/play/a00u
+#EXTINF:-1 tvg-id="StarGold2.in@SD",Star Gold 2 (576p)
+http://103.253.18.58:8000/play/a00r
+#EXTINF:-1 tvg-id="StarGoldRomance.in@SD",Star Gold Romance (576p)
+http://103.253.18.58:8000/play/a017
+#EXTINF:-1 tvg-id="StarGoldSelect.in@HD",Star Gold Select HD (1080p)
+http://103.253.18.58:8000/play/a02u
+#EXTINF:-1 tvg-id="StarGoldThrills.in@SD",Star Gold Thrills (576p)
+http://103.253.18.58:8000/play/a00o
 #EXTINF:-1 tvg-id="StarSports1.in@HD",Star Sports 1 HD (1080p)
-http://ptu.ridsys.in/riptv/live/STAR_SPORTS_1_HD/index.m3u8
-#EXTINF:-1 tvg-id="ZeeTamil.in@HD",Zee Tamil HD (1080p)
-http://ptu.ridsys.in/riptv/live/ZEE_TAMIL_HD/index.m3u8
+http://103.253.18.58:8000/play/a00m
+#EXTINF:-1 tvg-id="StarSports1Hindi.in@SD",Star Sports 1 Hindi (576p)
+http://103.253.18.58:8000/play/a03o
+#EXTINF:-1 tvg-id="EpicBhojpuri.in@SD",Epic Bhojpuri (576p)
+http://103.72.101.252:8080/live/3384.m3u8
+#EXTINF:-1 tvg-id="ShemarooFilmiGaane.in@HD",Shemaroo Filmi Gaane (1080p)
+https://prod-runn.cdn.runn.tv/shemaroo/stream/smrfgn/playlist.m3u8
+#EXTINF:-1 tvg-id="ZeeZest.in@HD",Zee Zest HD (1080p)
+http://103.72.101.252:8080/live/2757.m3u8
+#EXTINF:-1 tvg-id="ColorsCineplexBollywood.in@SD",Colors Cineplex Bollywood (576p)
+http://103.72.101.252:8080/live/1763.m3u8
+#EXTINF:-1 tvg-id="ZeeClassic.in@SD",Zee Classic (576p)
+http://103.72.101.252:8080/live/1691.m3u8
+#EXTINF:-1 tvg-id="ColorsBanglaCinema.in@SD",Colors Bangla Cinema (576p)
+http://103.72.101.252:8080/live/1657.m3u8
+#EXTINF:-1 tvg-id="ColorsKannadaCinema.in@SD",Colors Kannada Cinema (576p)
+http://103.72.101.252:8080/live/1632.m3u8
+#EXTINF:-1 tvg-id="EVidya12.in@SD",E-Vidya 12 (576p)
+http://103.72.101.252:8080/live/1532.m3u8
+#EXTINF:-1 tvg-id="ColorsCineplex.in@HD",Colors Cineplex HD (1080p)
+http://103.72.101.252:8080/live/1477.m3u8
+#EXTINF:-1 tvg-id="HistoryTV18.in@SD",History TV18 (576p)
+http://103.72.101.252:8080/live/1471.m3u8
+#EXTINF:-1 tvg-id="JanapriyamTV.in@SD",Janapriyam TV (480p)
+http://103.72.101.252:8080/live/1455.m3u8
+#EXTINF:-1 tvg-id="ColorsCineplexSuperhits.in@SD",Colors Cineplex Superhits (576p)
+http://103.72.101.252:8080/live/1450.m3u8
+#EXTINF:-1 tvg-id="SongdewTV.in@SD",Songdew TV (576p)
+http://103.72.101.252:8080/live/1411.m3u8
+#EXTINF:-1 tvg-id="EVidya11.in@SD",E-Vidya 11 (576p)
+http://103.72.101.252:8080/live/1410.m3u8
+#EXTINF:-1 tvg-id="ColorsKannada.in@SD",Colors Kannada (576p)
+http://103.72.101.252:8080/live/1370.m3u8
+#EXTINF:-1 tvg-id="ColorsBangla.in@SD",Colors Bangla (576p)
+http://103.72.101.252:8080/live/1369.m3u8
+#EXTINF:-1 tvg-id="Colors.in@SD",Colors (576p)
+http://103.72.101.252:8080/live/1368.m3u8
+#EXTINF:-1 tvg-id="ZeeMarathi.in@HD",Zee Marathi HD (1080p)
+http://103.72.101.252:8080/live/1360.m3u8
+#EXTINF:-1 tvg-id="ZeeTalkies.in@HD",Zee Talkies HD (1080p)
+http://103.72.101.252:8080/live/1358.m3u8
+#EXTINF:-1 tvg-id="ColorsInfinity.in@HD",Colors Infinity HD (1080p)
+http://103.72.101.252:8080/live/1158.m3u8
+#EXTINF:-1 tvg-id="ColorsMarathi.in@SD",Colors Marathi (576p)
+http://103.72.101.252:8080/live/1326.m3u8
+#EXTINF:-1 tvg-id="ColorsInfinity.in@SD",Colors Infinity (576p)
+http://103.72.101.252:8080/live/1325.m3u8
+#EXTINF:-1 tvg-id="ColorsGujaratiCinema.in@SD",Colors Gujarati Cinema (360p)
+http://103.72.101.252:8080/live/1324.m3u8
+#EXTINF:-1 tvg-id="Andflix.in@HD",&flix HD (1080p)
+http://103.72.101.252:8080/live/1322.m3u8
+#EXTINF:-1 tvg-id="ZeeCafe.in@HD",Zee Cafe HD (1080p)
+http://103.72.101.252:8080/live/1319.m3u8
+#EXTINF:-1 tvg-id="DigiShala.in@SD",Digi Shala (576p)
+http://103.72.101.252:8080/live/1227.m3u8
+#EXTINF:-1 tvg-id="NickHDPlus.in@HD",Nick HD+ (1080p)
+http://103.72.101.252:8080/live/1226.m3u8
+#EXTINF:-1 tvg-id="KalaignarTV.in@SD",Kalaignar TV (576p)
+http://103.72.101.252:8080/live/1209.m3u8
+#EXTINF:-1 tvg-id="AsianetMovies.in@SD",Asianet Movies (576p)
+#EXTVLCOPT:http-referrer=https://tulnit.com
+https://anet.keralive.workers.dev/v1/master/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/asianetmovies_live_https/index.m3u8
+#EXTINF:-1 tvg-id="MTV.in@HD",MTV HD (1080p)
+http://103.72.101.252:8080/live/1145.m3u8
+#EXTINF:-1 tvg-id="VandeGujarat16.in@SD",Vande Gujarat 16 (576p)
+http://103.72.101.252:8080/live/1094.m3u8
+#EXTINF:-1 tvg-id="VandeGujarat15.in@SD",Vande Gujarat 15 (576p)
+http://103.72.101.252:8080/live/1093.m3u8
+#EXTINF:-1 tvg-id="VandeGujarat14.in@SD",Vande Gujarat 14 (576p)
+http://103.72.101.252:8080/live/1092.m3u8
+#EXTINF:-1 tvg-id="VandeGujarat13.in@SD",Vande Gujarat 13 (576p)
+http://103.72.101.252:8080/live/1091.m3u8
+#EXTINF:-1 tvg-id="VandeGujarat12.in@SD",Vande Gujarat 12 (576p)
+http://103.72.101.252:8080/live/1090.m3u8
+#EXTINF:-1 tvg-id="VandeGujarat11.in@SD",Vande Gujarat 11 (576p)
+http://103.72.101.252:8080/live/1089.m3u8
+#EXTINF:-1 tvg-id="VandeGujarat10.in@SD",Vande Gujarat 10 (576p)
+http://103.72.101.252:8080/live/1088.m3u8
+#EXTINF:-1 tvg-id="VandeGujarat9.in@SD",Vande Gujarat 9 (576p)
+http://103.72.101.252:8080/live/1087.m3u8
+#EXTINF:-1 tvg-id="VandeGujarat8.in@SD",Vande Gujarat 8 (576p)
+http://103.72.101.252:8080/live/1086.m3u8
+#EXTINF:-1 tvg-id="VandeGujarat7.in@SD",Vande Gujarat 7 (576p)
+http://103.72.101.252:8080/live/1085.m3u8
+#EXTINF:-1 tvg-id="VandeGujarat6.in@SD",Vande Gujarat 6 (576p)
+http://103.72.101.252:8080/live/1084.m3u8
+#EXTINF:-1 tvg-id="VandeGujarat5.in@SD",Vande Gujarat 5 (576p)
+http://103.72.101.252:8080/live/1083.m3u8
+#EXTINF:-1 tvg-id="VandeGujarat3.in@SD",Vande Gujarat 3 (576p)
+http://103.72.101.252:8080/live/1082.m3u8
+#EXTINF:-1 tvg-id="VandeGujarat4.in@SD",Vande Gujarat 4 (576p)
+http://103.72.101.252:8080/live/1071.m3u8
+#EXTINF:-1 tvg-id="VandeGujarat2.in@SD",Vande Gujarat 2 (576p)
+http://103.72.101.252:8080/live/1070.m3u8
+#EXTINF:-1 tvg-id="VandeGujarat1.in@SD",Vande Gujarat 1 (576p)
+http://103.72.101.252:8080/live/1069.m3u8
+#EXTINF:-1 tvg-id="SwayamPrabha18.in@SD",Swayam Prabha 18 (576p)
+http://103.72.101.252:8080/live/999.m3u8
+#EXTINF:-1 tvg-id="SwayamPrabha22.in@SD",Swayam Prabha 22 (576p)
+http://103.72.101.252:8080/live/998.m3u8
+#EXTINF:-1 tvg-id="SwayamPrabha21.in@SD",Swayam Prabha 21 (576p)
+http://103.72.101.252:8080/live/997.m3u8
+#EXTINF:-1 tvg-id="SwayamPrabha17.in@SD",Swayam Prabha 17 (576p)
+http://103.72.101.252:8080/live/996.m3u8
+#EXTINF:-1 tvg-id="SwayamPrabha15.in@SD",Swayam Prabha 15 (576p)
+http://103.72.101.252:8080/live/995.m3u8
+#EXTINF:-1 tvg-id="SwayamPrabha16.in@SD",Swayam Prabha 16 (576p)
+http://103.72.101.252:8080/live/994.m3u8
+#EXTINF:-1 tvg-id="SwayamPrabha14.in@SD",Swayam Prabha 14 (576p)
+http://103.72.101.252:8080/live/993.m3u8
+#EXTINF:-1 tvg-id="SwayamPrabha13.in@SD",Swayam Prabha 13 (576p)
+http://103.72.101.252:8080/live/992.m3u8
+#EXTINF:-1 tvg-id="SwayamPrabha12.in@SD",Swayam Prabha 12 (576p)
+http://103.72.101.252:8080/live/991.m3u8
+#EXTINF:-1 tvg-id="SwayamPrabha11.in@SD",Swayam Prabha 11 (576p)
+http://103.72.101.252:8080/live/990.m3u8
+#EXTINF:-1 tvg-id="SwayamPrabha10.in@SD",Swayam Prabha 10 (576p)
+http://103.72.101.252:8080/live/989.m3u8
+#EXTINF:-1 tvg-id="SwayamPrabha9.in@SD",Swayam Prabha 9 (576p)
+http://103.72.101.252:8080/live/988.m3u8
+#EXTINF:-1 tvg-id="SwayamPrabha6.in@SD",Swayam Prabha 6 (576p)
+http://103.72.101.252:8080/live/987.m3u8
+#EXTINF:-1 tvg-id="SwayamPrabha5.in@SD",Swayam Prabha 5 (576p)
+http://103.72.101.252:8080/live/986.m3u8
+#EXTINF:-1 tvg-id="SwayamPrabha7.in@SD",Swayam Prabha 7 (576p)
+http://103.72.101.252:8080/live/985.m3u8
+#EXTINF:-1 tvg-id="SwayamPrabha4.in@SD",Swayam Prabha 4 (576p)
+http://103.72.101.252:8080/live/984.m3u8
+#EXTINF:-1 tvg-id="SwayamPrabha8.in@SD",Swayam Prabha 8 (576p)
+http://103.72.101.252:8080/live/983.m3u8
+#EXTINF:-1 tvg-id="SwayamPrabha3.in@SD",Swayam Prabha 3 (576p)
+http://103.72.101.252:8080/live/982.m3u8
+#EXTINF:-1 tvg-id="SwayamPrabha1.in@SD",Swayam Prabha 1 (576p)
+http://103.72.101.252:8080/live/980.m3u8
+#EXTINF:-1 tvg-id="SarvDharamSangam.in@SD",Sarv Dharam Sangam (576p)
+http://103.72.101.252:8080/live/972.m3u8
+#EXTINF:-1 tvg-id="HistoryTV18.in@HD",History TV18 HD Tamil (1080p)
+http://103.72.101.252:8080/live/579.m3u8
+#EXTINF:-1 tvg-id="EVidya10.in@SD",E-Vidya 10 (576p)
+http://103.72.101.252:8080/live/411.m3u8
+#EXTINF:-1 tvg-id="EVidya9.in@SD",E-Vidya 9 (576p)
+http://103.72.101.252:8080/live/410.m3u8
+#EXTINF:-1 tvg-id="EVidya8.in@SD",E-Vidya 8 (576p)
+http://103.72.101.252:8080/live/409.m3u8
+#EXTINF:-1 tvg-id="EVidya6.in@SD",E-Vidya 6 (576p)
+http://103.72.101.252:8080/live/408.m3u8
+#EXTINF:-1 tvg-id="EVidya5.in@SD",E-Vidya 5 (576p)
+http://103.72.101.252:8080/live/407.m3u8
+#EXTINF:-1 tvg-id="Asianet.in@SD",Asianet (576p)
+#EXTVLCOPT:http-referrer=https://tulnit.com
+https://anet.keralive.workers.dev/v1/master/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/starasianet1_live_https/index.m3u8
+#EXTINF:-1 tvg-id="StarMaa.in@HD",Star Maa HD (1080p)
+#EXTVLCOPT:http-referrer=https://tulnit.com
+https://anet.keralive.workers.dev/v1/master/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/starmaa1_live_https/index.m3u8
+#EXTINF:-1 tvg-id="TimesNowWorld.in@SD",Times Now World (1080p)
+http://103.72.101.252:8080/live/876.m3u8
+#EXTINF:-1 tvg-id="Sonic.in@SD",Sonic (576p)
+http://103.72.101.252:8080/live/815.m3u8
+#EXTINF:-1 tvg-id="TravelxpTamil.in@SD",Travelxp Tamil (576p)
+http://103.72.101.252:8080/live/814.m3u8
+#EXTINF:-1 tvg-id="ColorsSuper.in@SD",Colors Super (1080p)
+http://103.72.101.252:8080/live/785.m3u8
+#EXTINF:-1 tvg-id="RajNews.in@SD",Raj News (576p)
+http://103.72.101.252:8080/live/767.m3u8
+#EXTINF:-1 tvg-id="StarMaaMovies.in@HD",Star Maa Movies HD (1080p)
+#EXTVLCOPT:http-referrer=https://tulnit.com
+https://anet.keralive.workers.dev/v1/master/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/maamovies_live_https/index.m3u8
+#EXTINF:-1 tvg-id="ColorsKannada.in@HD",Colors Kannada HD (1080p)
+http://103.72.101.252:8080/live/757.m3u8
+#EXTINF:-1 tvg-id="ColorsBangla.in@HD",Colors Bangla HD (1080p)
+http://103.72.101.252:8080/live/756.m3u8
+#EXTINF:-1 tvg-id="ColorsMarathi.in@HD",Colors Marathi HD (1080p)
+http://103.72.101.252:8080/live/755.m3u8
+#EXTINF:-1 tvg-id="RajMusixTamil.in@SD",Raj Musix Tamil (576p)
+http://103.72.101.252:8080/live/748.m3u8
+#EXTINF:-1 tvg-id="ZeeSarthak.in@SD",Zee Sarthak (576p)
+http://103.72.101.252:8080/live/722.m3u8
+#EXTINF:-1 tvg-id="RajTV.in@SD",Raj TV (576p)
+http://103.72.101.252:8080/live/707.m3u8
+#EXTINF:-1 tvg-id="RajDigitalPlus.in@SD",Raj Digital Plus (576p)
+http://103.72.101.252:8080/live/683.m3u8
+#EXTINF:-1 tvg-id="ZeeTamil.in@SD",Zee Tamil (576p)
+http://103.72.101.252:8080/live/628.m3u8
+#EXTINF:-1 tvg-id="ZeeBangla.in@SD",Zee Bangla (576p)
+http://103.72.101.252:8080/live/625.m3u8
+#EXTINF:-1 tvg-id="ColorsCineplex.in@SD",Colors Cineplex (576p)
+http://103.72.101.252:8080/live/482.m3u8
+#EXTINF:-1 tvg-id="ZeeTamilNews.in@SD",Zee Tamil News (720p)
+https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/in/ZMCL/ZeeTamilNews.m3u8
+#EXTINF:-1 tvg-id="ZeeThirai.in@HD",Zee Thirai HD (1080p)
+http://103.72.101.252:8080/live/3051.m3u8
+#EXTINF:-1 tvg-id="ColorsTamil.in@HD",Colors Tamil HD (1080p)
+http://103.72.101.252:8080/live/429.m3u8
+#EXTINF:-1 tvg-id="SonySAB.in@HD",Sony SAB HD (1080p) [Geo-blocked]
+https://sl.vodep39240327.workers.dev/channel/SONY%20SAB%20HD.m3u8
+#EXTINF:-1 tvg-id="StarSports2.in@HD",Star Sports 2 HD (1080p)
+https://mini.allinonereborn.fun/tata.php?id=11819
+#EXTINF:-1 tvg-id="JothiTV.in@SD",Jothi TV (1080p)
+http://103.154.3.101:5001/live/2768.m3u8
+#EXTINF:-1 tvg-id="ZeeBiskope.in@SD",Zee Biskope (576p)
+http://103.154.3.101:5001/live/559.m3u8
+#EXTINF:-1 tvg-id="AndxplorHD.in@HD",&xplor HD (720p)
+https://mini.allinonereborn.fun/tata.php?id=11619
+#EXTINF:-1 tvg-id="HistoryTV18.in@HD",History TV18 HD (1080p)
+http://103.154.3.101:5001/live/577.m3u8
+#EXTINF:-1 tvg-id="TV13Gujarati.in@SD",TV13 Gujarati (720p)
+https://live.wrencdn.in/wrencdn/hls/tv13_web/index.m3u8
+#EXTINF:-1 tvg-id="ZeeTV.in@HD",Zee TV HD (1080p)
+https://stb-air.wasmer.app//play.php?id=LIVETV_LIVETVCHANNEL_ZEE_TV_HD&uid=gana-sunega&pass=krish-ka
+#EXTINF:-1 tvg-id="SonyEntertainmentTelevision.in@HD",Sony Entertainment Television HD (1080p)
+http://stb-air.wasmer.app//play.php?id=LIVETV_LIVETVCHANNEL_SET_HD&uid=gana-sunega&pass=krish-ka
+#EXTINF:-1 tvg-id="StarUtsavMovies.in@SD",Star Utsav Movies (576p)
+http://stb-air.wasmer.app//play.php?id=LIVETV_LIVETVCHANNEL_STAR_UTSAV_MOVIES&uid=gana-sunega&pass=krish-ka
