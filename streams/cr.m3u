@@ -141,3 +141,13 @@ https://cloudvideo.servers10.com:8081/8198/index.m3u8
 https://acceso.radiosportstv.online:3022/stream/play.m3u8
 #EXTINF:-1 tvg-id="ZurquiTV.cr@SD",Zurquí TV (720p)
 https://videoserver.tmcreativos.com:19360/gesfnvpamn/gesfnvpamn.m3u8
+#EXTINF:-1 tvg-id="RadioTurrialbaTVSports.cr@SD",Radio Turrialba TV Sports (720p) [Not 24/7]
+#EXTVLCOPT:http-referrer=https://www.radioturrialba.com/p/radio-turrialba-en-vivo.html
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+https://sc1.escuela4.com/live/d7316d659b5a77fb8719d49330315886807b02b0.m3u8
+#EXTINF:-1 tvg-id="TeleMas.cr@SD",TeleMas (720p) [Not 24/7]
+https://acceso.mediosdecostarica.com:3192/hybrid/play.m3u8
+#EXTINF:-1 tvg-id="BestClasicosTV.cr@SD",BestClasicosTV (720p) [Not 24/7]
+https://acceso.mediosdecostarica.com:3873/hybrid/play.m3u8
+#EXTINF:-1 tvg-id="Canal10.cr@SD",Canal 10 (720p) [Not 24/7]
+https://acceso.mediosdecostarica.com:3606/hybrid/play.m3u8

@@ -1,10 +1,16 @@
+import { restEndpointMethods } from '@octokit/plugin-rest-endpoint-methods'
 import axios, { AxiosProxyConfig, AxiosRequestConfig } from 'axios'
+import { paginateGraphQL } from '@octokit/plugin-paginate-graphql'
 import { parse as parsePlaylist, setOptions } from 'hls-parser'
-import { parse as parseManifest } from 'mpd-parser'
+import { paginateRest } from '@octokit/plugin-paginate-rest'
+import { Collection, Dictionary } from '@freearhey/core'
 import { SocksProxyAgent } from 'socks-proxy-agent'
-import { ProxyParser } from './core/proxyParser.js'
-import { TESTING } from './constants.js'
+import { parse as parseManifest } from 'mpd-parser'
+import { TESTING, OWNER, REPO } from './constants'
+import { ProxyParser, DataSet } from './core'
+import { Discussion, Issue } from './models'
 import normalizeUrl from 'normalize-url'
+import { Octokit } from '@octokit/core'
 import { orderBy } from 'es-toolkit'
 import path from 'node:path'
 import fs from 'node:fs'
@@ -90,7 +96,9 @@ export async function getStreamInfo(
       const response = await axios(url, request)
 
       data = response.data
-    } catch {}
+    } catch {
+      // do nothing
+    }
   }
 
   if (!data) return undefined
@@ -115,7 +123,9 @@ export async function getStreamInfo(
           }
         }
       }
-    } catch {}
+    } catch {
+      // do nothing
+    }
   } else if (url.includes('.mpd')) {
     const manifest = parseManifest(data, {
       manifestUri: url,
@@ -137,4 +147,149 @@ export async function getStreamInfo(
   }
 
   return info
+}
+
+export async function loadIssues(props?: { labels: string | string[] }) {
+  const CustomOctokit = Octokit.plugin(paginateRest, restEndpointMethods)
+  const octokit = new CustomOctokit()
+
+  let labels = ''
+  if (props && props.labels) {
+    labels = Array.isArray(props.labels) ? props.labels.join(',') : props.labels
+  }
+  let issues: object[] = []
+  if (TESTING) {
+    issues = (await import('../tests/__data__/input/issues.js')).default
+  } else {
+    issues = await octokit.paginate(octokit.rest.issues.listForRepo, {
+      owner: OWNER,
+      repo: REPO,
+      per_page: 100,
+      labels,
+      status: 'open',
+      headers: {
+        'X-GitHub-Api-Version': '2022-11-28'
+      }
+    })
+  }
+
+  return new Collection(issues).map(parseIssue)
+}
+
+function parseIssue(issue: { number: number; body: string; labels: { name: string }[] }): Issue {
+  const FIELDS = new Dictionary({
+    'Stream ID': 'stream_id',
+    'Channel ID': 'channel_id',
+    'Feed ID': 'feed_id',
+    'Stream URL': 'stream_url',
+    Label: 'label',
+    Quality: 'quality',
+    'HTTP User-Agent': 'http_user_agent',
+    'HTTP User Agent': 'http_user_agent',
+    'HTTP Referrer': 'http_referrer',
+    'What happened to the stream?': 'reason',
+    Reason: 'reason',
+    Notes: 'notes'
+  })
+
+  const fields = typeof issue.body === 'string' ? issue.body.split('###') : []
+
+  const data = new Dictionary<string>()
+  fields.forEach((field: string) => {
+    const parsed = typeof field === 'string' ? field.split(/\r?\n/).filter(Boolean) : []
+    let _label = parsed.shift()
+    _label = _label ? _label.replace(/ \(optional\)| \(required\)/, '').trim() : ''
+    let _value = parsed.join('\r\n')
+    _value = _value ? _value.trim() : ''
+
+    if (!_label || !_value) return data
+
+    const id = FIELDS.get(_label)
+    const value: string = _value === '_No response_' || _value === 'None' ? '' : _value
+
+    if (!id) return
+
+    data.set(id, value)
+  })
+
+  const labels = issue.labels.map(label => label.name)
+
+  return new Issue({ number: issue.number, labels, data: new DataSet(data) })
+}
+
+export async function loadDiscussions() {
+  let discussions: object[] = []
+  if (TESTING) {
+    discussions = (await import('../tests/__data__/input/discussions.js')).default
+  } else {
+    const CustomOctokit = Octokit.plugin(paginateGraphQL)
+    const octokit = new CustomOctokit({
+      auth: process.env.GITHUB_TOKEN
+    })
+
+    const query = `
+      query ($owner: String!, $repo: String!, $cursor: String) {
+        repository(owner: $owner, name: $repo) {
+          discussions(first: 100, after: $cursor, states: OPEN) {
+            nodes {
+              number
+              body
+              category {
+                name
+              }
+            }
+            pageInfo {
+              endCursor
+              hasNextPage
+            }
+          }
+        }
+      }
+    `
+
+    const result = await octokit.graphql.paginate(query, {
+      owner: 'iptv-org',
+      repo: 'iptv'
+    })
+
+    discussions = result.repository.discussions.nodes
+  }
+
+  return new Collection(discussions).map(parseDiscussion)
+}
+
+function parseDiscussion(discussion: {
+  number: number
+  category: { name: string }
+  body: string
+}): Discussion {
+  const FIELDS = new Dictionary({
+    'Stream ID': 'stream_id'
+  })
+
+  const fields = typeof discussion.body === 'string' ? discussion.body.split('###') : []
+
+  const data = new Dictionary<string>()
+  fields.forEach((field: string) => {
+    const parsed = typeof field === 'string' ? field.split(/\r?\n/).filter(Boolean) : []
+    let _label = parsed.shift()
+    _label = _label ? _label.replace(/ \(optional\)| \(required\)/, '').trim() : ''
+    let _value = parsed.join('\r\n')
+    _value = _value ? _value.trim() : ''
+
+    if (!_label || !_value) return data
+
+    const id = FIELDS.get(_label)
+    const value: string = _value === '_No response_' || _value === 'None' ? '' : _value
+
+    if (!id) return
+
+    data.set(id, value)
+  })
+
+  return new Discussion({
+    number: discussion.number,
+    category: discussion.category.name,
+    data: new DataSet(data)
+  })
 }
