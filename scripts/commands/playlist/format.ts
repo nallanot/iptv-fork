@@ -5,8 +5,8 @@ import { Storage } from '@freearhey/storage-js'
 import { STREAMS_DIR } from '../../constants'
 import { PlaylistParser } from '../../core'
 import { getStreamInfo } from '../../utils'
+import { loadData, data } from '../../api'
 import cliProgress from 'cli-progress'
-import { loadData } from '../../api'
 import { eachLimit } from 'async'
 import path from 'node:path'
 import os from 'node:os'
@@ -44,6 +44,10 @@ async function main() {
   let files = program.args.length ? program.args : await streamsStorage.list('**/*.m3u')
   files = files.map((filepath: string) => path.basename(filepath))
   let streams = await parser.parse(files)
+  streams = streams.map((stream: Stream) => {
+    stream.setGuides(data.guidesGroupedByStreamId.get(stream.getId()))
+    return stream
+  })
 
   logger.info(`found ${streams.count()} streams`)
 
@@ -82,7 +86,7 @@ async function main() {
   logger.info('adding the missing quality...')
   const progressBar = new cliProgress.SingleBar({
     clearOnComplete: true,
-    format: `[{bar}] {percentage}% | {value}/{total}`
+    format: '[{bar}] {percentage}% | {value}/{total}'
   })
   progressBar.start(streams.count(), 0)
   await eachLimit(streams.all(), options.parallel, async (stream: Stream) => {

@@ -1,6 +1,6 @@
 import { Dictionary } from '@freearhey/core'
 
-export class IssueData {
+export class DataSet {
   _data: Dictionary<string>
   constructor(data: Dictionary<string>) {
     this._data = data

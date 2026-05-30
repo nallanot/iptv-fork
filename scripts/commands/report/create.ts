@@ -1,9 +1,9 @@
+import { isURI, truncate, loadIssues, loadDiscussions } from '../../utils'
 import { Logger, Collection, Dictionary } from '@freearhey/core'
-import { IssueLoader, PlaylistParser } from '../../core'
 import { Storage } from '@freearhey/storage-js'
-import { isURI, truncate } from '../../utils'
 import { STREAMS_DIR } from '../../constants'
-import { Issue, Stream } from '../../models'
+import { Discussion, Issue, Stream } from '../../models'
+import { PlaylistParser } from '../../core'
 import { data, loadData } from '../../api'
 
 const status = {
@@ -22,11 +22,13 @@ const status = {
 
 async function main() {
   const logger = new Logger()
-  const issueLoader = new IssueLoader()
   let report = new Collection()
 
   logger.info('loading issues...')
-  const issues = await issueLoader.load()
+  const issues = await loadIssues()
+
+  logger.info('loading discussions...')
+  const discussions = await loadDiscussions()
 
   logger.info('loading data from api...')
   await loadData()
@@ -135,16 +137,17 @@ async function main() {
   })
 
   logger.info('checking channel search requests...')
-  const channelSearchRequests = issues.filter(issue =>
-    issue.labels.find((label: string) => label === 'channel search')
+  const channelSearchRequests = discussions.filter(
+    (discussion: Discussion) => discussion.category === 'Channel Search'
   )
   const channelSearchRequestsBuffer = new Dictionary()
-  channelSearchRequests.forEach((issue: Issue) => {
-    const streamId = issue.data.getString('stream_id') || issue.data.getString('channel_id') || ''
+  channelSearchRequests.forEach((discussion: Discussion) => {
+    const streamId =
+      discussion.data.getString('stream_id') || discussion.data.getString('channel_id') || ''
     const [channelId, feedId] = streamId.split('@')
 
     const result = {
-      issueNumber: issue.number,
+      issueNumber: discussion.number,
       type: 'channel search',
       streamId: streamId || undefined,
       streamUrl: undefined,

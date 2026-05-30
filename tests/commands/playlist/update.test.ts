@@ -4,7 +4,7 @@ import * as fs from 'fs-extra'
 import { glob } from 'glob'
 
 const ENV_VAR =
-  'cross-env DATA_DIR=tests/__data__/input/data STREAMS_DIR=tests/__data__/output/streams'
+  'cross-env DATA_DIR=tests/__data__/input/data STREAMS_DIR=tests/__data__/output/streams LOGS_DIR=tests/__data__/output/logs'
 
 beforeEach(() => {
   fs.emptyDirSync('tests/__data__/output')
@@ -19,21 +19,25 @@ describe('playlist:update', () => {
       const stdout = execSync(cmd, { encoding: 'utf8' })
       if (process.env.DEBUG === 'true') console.log(cmd, stdout)
 
-      const files = glob.sync('tests/__data__/expected/playlist_update/*.m3u').map(filepath => {
-        const fileUrl = pathToFileURL(filepath).toString()
-        const pathToRemove = pathToFileURL('tests/__data__/expected/playlist_update/').toString()
+      const files = glob
+        .sync('tests/__data__/expected/playlist_update/streams/*.m3u')
+        .map(filepath => {
+          const fileUrl = pathToFileURL(filepath).toString()
+          const pathToRemove = pathToFileURL(
+            'tests/__data__/expected/playlist_update/streams/'
+          ).toString()
 
-        return fileUrl.replace(pathToRemove, '')
-      })
+          return fileUrl.replace(pathToRemove, '')
+        })
 
       files.forEach(filepath => {
         expect(content(`tests/__data__/output/streams/${filepath}`)).toBe(
-          content(`tests/__data__/expected/playlist_update/${filepath}`)
+          content(`tests/__data__/expected/playlist_update/streams/${filepath}`)
         )
       })
 
-      expect(stdout).toBe(
-        'OUTPUT=closes #14151, closes #14150, closes #14110, closes #14120, closes #14175, closes #14105, closes #14104, closes #14057, closes #14034, closes #13964, closes #13893, closes #13881, closes #13793, closes #13751, closes #13715\n'
+      expect(content('tests/__data__/output/logs/playlist_update.log')).toBe(
+        content('tests/__data__/expected/playlist_update/playlist_update.log')
       )
 
       done()

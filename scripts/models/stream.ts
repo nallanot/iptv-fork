@@ -1,8 +1,8 @@
+import { normalizeURL, isURI } from '../utils'
 import { Collection } from '@freearhey/core'
 import parser from 'iptv-playlist-parser'
-import { normalizeURL } from '../utils'
 import * as sdk from '@iptv-org/sdk'
-import { IssueData } from '../core'
+import { DataSet } from '../core'
 import { data } from '../api'
 import path from 'node:path'
 
@@ -12,15 +12,41 @@ export class Stream extends sdk.Models.Stream {
   groupTitle: string = 'Undefined'
   removed: boolean = false
   tvgId?: string
-  label: string | null
   statusCode?: string
+  guides = new Collection<sdk.Models.Guide>()
 
-  updateWithIssue(issueData: IssueData): this {
+  setGuides(guides?: sdk.Models.Guide[]) {
+    this.guides = new Collection(guides)
+  }
+
+  getGuides(): Collection<sdk.Models.Guide> {
+    return this.guides
+  }
+
+  validate(): Collection<Error> {
+    const errors = new Collection<Error>()
+    if (!isURI(this.url)) {
+      errors.add(new Error(`The stream URL "${this.url}" is invalid`))
+    }
+
+    return errors
+  }
+
+  updateWithIssue(dataSet: DataSet): this {
+    const streamId = dataSet.getString('stream_id') || ''
+    const [channelId, feedId] = streamId.split('@')
+
+    if (channelId) {
+      this.channel = channelId
+      this.feed = feedId
+      this.updateTvgId().updateTitle().updateFilepath()
+    }
+
     const data = {
-      label: issueData.getString('label'),
-      quality: issueData.getString('quality'),
-      httpUserAgent: issueData.getString('http_user_agent'),
-      httpReferrer: issueData.getString('http_referrer')
+      label: dataSet.getString('label'),
+      quality: dataSet.getString('quality'),
+      httpUserAgent: dataSet.getString('http_user_agent'),
+      httpReferrer: dataSet.getString('http_referrer')
     }
 
     if (data.label !== undefined) this.label = data.label
@@ -63,12 +89,12 @@ export class Stream extends sdk.Models.Stream {
       quality: quality || null,
       url: data.url,
       referrer: data.http.referrer || null,
-      user_agent: data.http['user-agent'] || null
+      user_agent: data.http['user-agent'] || null,
+      label: label || null
     })
 
     stream.tvgId = data.tvg.id
     stream.line = data.line
-    stream.label = label || null
 
     return stream
   }

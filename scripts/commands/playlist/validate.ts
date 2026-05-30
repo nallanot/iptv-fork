@@ -39,7 +39,7 @@ async function main() {
   const streams = await parser.parse(files)
   const buffer = new Dictionary<Stream>()
   streams.forEach((stream: Stream) => {
-    if (!selectedFiles.includes(stream.filepath)) {
+    if (!stream.filepath || !selectedFiles.includes(stream.filepath)) {
       buffer.set(stream.url, stream)
     }
   })
@@ -70,7 +70,7 @@ async function main() {
         log.add({
           type: 'error',
           line: stream.getLine(),
-          message: `"${stream.url}" is already in the "${origin.filepath}"`
+          message: `"${stream.url}" is already in the "${origin?.filepath}"`
         })
       } else {
         buffer.set(stream.url, stream)
