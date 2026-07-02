@@ -45,6 +45,8 @@ https://stream.polar.cz/polar/polarlive-1/playlist.m3u8
 http://88.212.15.19/live/prima_avc_25p/playlist.m3u8
 #EXTINF:-1 tvg-id="PrimaLove.cz@SD",Prima Love (1080p) [Geo-blocked]
 http://88.212.15.19/live/prima_love_avc_25p/playlist.m3u8
+#EXTINF:-1 tvg-id="PrimaStar.cz@SD",Prima Star (1080p)
+http://88.212.15.19/live/test_prima_star_hevc_25p/playlist.m3u8
 #EXTINF:-1 tvg-id="RetroMusicTV.cz@SD",Retro Music Television (360p)
 https://stream.mediawork.cz/retrotv/retrotvHQ1/playlist.m3u8
 #EXTINF:-1 tvg-id="RetroMusicTV.cz@SD",Retro Music TV (360p)
@@ -65,3 +67,44 @@ https://vysilani.zaktv.cz/broadcast/hls/utv/index.m3u8
 https://stream.polar.cz/vctv/vctvlive-1/playlist.m3u8
 #EXTINF:-1 tvg-id="CurrentTimeTV.cz@SD",Настоящее Время (1080p)
 https://rfe-ingest.akamaized.net/hls/live/2033043/tvmc05/master.m3u8
+#EXTINF:-1 tvg-id="MusicBoxClassic.cz@SD",Music Box Classic
+http://88.212.15.19/live/mb_classic/index.m3u8
+#EXTINF:-1 tvg-id="MusicBoxDance.cz@SD",Music Box Dance
+http://88.212.15.19/live/mb_dance/index.m3u8
+#EXTINF:-1 tvg-id="MusicBoxHits.cz@SD",Music Box Hits
+http://88.212.15.19/live/mb_hits/index.m3u8
+#EXTINF:-1 tvg-id="MusicBoxSexy.cz@SD",Music Box Sexy
+http://88.212.15.19/live/mb_sexy/index.m3u8
+#EXTINF:-1 tvg-id="BarrandovKrimi.cz@SD",Barrandov Krimi (1080p)
+https://dash4.antik.sk/live/test_barrandov_plus_atk_1200/playlist.m3u8
+#EXTINF:-1 tvg-id="History.cz@SD",History
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.3
+http://88.212.15.19/live/test_history/playlist.m3u8
+#EXTINF:-1 tvg-id="DisneyChannel.cz@SD",Disney Channel
+http://88.212.15.19/live/test_disney/playlist.m3u8
+#EXTINF:-1 tvg-id="TelevizeSeznam.cz@SD",Televize Seznam (1080p)
+http://88.212.15.19/live/test_seznam_hevc_25p/playlist.m3u8
+#EXTINF:-1 tvg-id="TVNoe.cz@SD",TV Noe (720p) [Geo-blocked]
+https://n105.quickmedia.tv/noetv/live/noetv/Ifd4_1_4/chunks_dvr_timeshift-0-7200.m3u8
+#EXTINF:-1 tvg-id="TVNoePlus.cz@SD",TV Noe+ (720p) [Geo-blocked]
+https://n105.quickmedia.tv/noetvplus/live/noetvplus/Shz3_1_1/chunks_dvr_timeshift-0-7200.m3u8
+#EXTINF:-1 tvg-id="CNNPrimaNews.cz@SD",CNN Prima News (1080p)
+http://88.212.15.19/live/test_cnn_pirma_news/playlist.m3u8
+#EXTINF:-1 tvg-id="PrimaZoom.cz@SD",Prima Zoom (1080p)
+http://88.212.15.19/live/prima_zoom_avc_25p/playlist.m3u8
+#EXTINF:-1 tvg-id="PrimaShow.cz@SD",Prima Show (1080p)
+http://88.212.15.19/live/test_prima_show_hevc_25p/playlist.m3u8
+#EXTINF:-1 tvg-id="SportyTV.cz@SD",Sporty TV
+https://dash2.antik.sk/live/sporty_tv/index.m3u8
+#EXTINF:-1 tvg-id="GolfChannel.cz@SD",Golf Channel
+https://dash4.antik.sk/live/test_golf_channel/playlist.m3u8
+#EXTINF:-1 tvg-id="OckoBlack.cz@SD",Ocko Black
+https://dash2.antik.sk/live/test_ocko_black/playlist.m3u8
+#EXTINF:-1 tvg-id="OckoStar.cz@SD",Ocko Star
+https://dash4.antik.sk/live/test_ocko_star/playlist.m3u8
+#EXTINF:-1 tvg-id="Sport1.cz@SD",Sport1
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
+http://88.212.15.19/live/test_sport1_25p/playlist.m3u8
+#EXTINF:-1 tvg-id="Sport2.cz@SD",Sport2
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
+http://88.212.15.19/live/test_sport_2/playlist.m3u8

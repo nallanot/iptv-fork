@@ -33,3 +33,13 @@ https://srv2.tropicalmoonmedia.com/eventostv/eventostv/playlist.m3u8
 https://bcovlive-a.akamaihd.net/74f665e9ff8447639d4de4b8b458d8ae/us-east-1/6058004209001/playlist_dvr.m3u8
 #EXTINF:-1 tvg-id="TVN.pa@SD",TVN (720p)
 https://bcovlive-a.akamaihd.net/628aecb4fccb4c52b4f9c8d5cc57fb73/us-west-2/6058004209001/playlist_dvr.m3u8
+#EXTINF:-1 tvg-id="Mas23TV.pa@SD",Mas23 TV
+https://movil.ejeserver.com/live/mas23tv.m3u8
+#EXTINF:-1 tvg-id="NexTVCanal21.pa@SD",Nex TV Canal 21
+https://movil.ejeserver.com/live/nextv.m3u8
+#EXTINF:-1 tvg-id="MINFAVTV.pa@SD",MINFAV TV
+https://mp.panelchs.com:1936/8044/8044/playlist.m3u8
+#EXTINF:-1 tvg-id="PindinTV.pa@SD",Pindin TV
+https://sistemastr.tropicalmoonmedia.com/live/7C452409423F57ADC960F6405635267F/7.m3u8
+#EXTINF:-1 tvg-id="Telemetro.pa@SD",Telemetro (720p)
+http://181.78.121.15:8000/play/a001/index.m3u8

@@ -223,14 +223,16 @@ http://cdn11.live247stream.com/tag/tv/playlist.m3u8
 https://origin-de-y376549.cdn.nextologies.com:444/4c3caf7294b3/fbbd0aee3d9a8260/playlist.m3u8
 #EXTINF:-1 tvg-id="TamilVisionTV.ca@SD",TamilVision-TV (1080p)
 https://live.cmr24.fm/TVI/HD/chunks.m3u8
-#EXTINF:-1 tvg-id="TCFTV.ca@SD",TCF TV
-http://66.11.33.44:8081/live/TCF/playlist.m3u8
+#EXTINF:-1 tvg-id="TheNewsForum.ca@HD",The News Forum (1080p)
+http://name-port.to/live/Gregory123/Gregory321/2420047.ts
 #EXTINF:-1 tvg-id="TSC.ca@SD",Today's Shopping Choice (TSC) (720p)
 https://tscamd.akamaized.net/hls/live/503340/TSCLive/master.m3u8
 #EXTINF:-1 tvg-id="Toronto360TV.ca@SD",Toronto 360 TV (720p) [Not 24/7]
 http://cdn3.toronto360.tv:8081/toronto360/hd/playlist.m3u8
 #EXTINF:-1 tvg-id="TSNTheOcho.ca@SD",TSN The Ocho (1080p)
 https://d3pnbvng3bx2nj.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-rds8g35qfqrnv/TSN_The_Ocho.m3u8
+#EXTINF:-1 tvg-id="TV5QuebecCanada.ca@SD",TV5 Quebec Canada (1080p)
+http://23.133.220.149/TV5/index.m3u8
 #EXTINF:-1 tvg-id="TV16Toronto.ca@SD",TV 16 Toronto (720p) [Not 24/7]
 http://rtmp.smartstream.video:1935/capco/tv29/playlist.m3u8
 #EXTINF:-1 tvg-id="CFTMDT.ca@SD",TVA [Geo-blocked]
@@ -238,14 +240,35 @@ https://tvalive-dai01.akamaized.net/Content/HLS/Live/channel(575b93c5-be31-ee34-
 #EXTINF:-1 tvg-id="TVOKids.ca@SD",TVOKids
 https://bcovlive-a.akamaihd.net/rf86f817779524249abf842af6d16f55f/us-east-1/15364602001/playlist.m3u8
 #EXTINF:-1 tvg-id="UvagutTV.ca@SD",Uvagut TV (1080p)
-https://dee7mwgg9dzvl.cloudfront.net/hls/uvagut/playlist.m3u8
+#EXTVLCOPT:http-referrer=https://www.uvagut.tv/
+https://hls.uvagut.tv/hls/uvagut/playlist.m3u8
 #EXTINF:-1 tvg-id="WataneMaaTV.ca@SD",Watan-e-Maa TV (720p)
 https://5caf24a595d94.streamlock.net:1937/8132/8132/playlist.m3u8
 #EXTINF:-1 tvg-id="WCGtv.ca@SD",WCGtv Public (720p)
 https://wowzastream.westmancom.com/wcgtvlive/wcgtvPSA.stream/master.m3u8
 #EXTINF:-1 tvg-id="ZeeTVCanada.ca@SD",Zee TV Canada (1080p)
 https://origin-cae-m462953.toober.com/4c3caf7294b3/c8bf99484885/playlist.m3u8
-#EXTINF:-1 tvg-id="TheNewsForum.ca@HD",The News Forum (1080p)
-http://name-port.to/live/Gregory123/Gregory321/2420047.ts
-#EXTINF:-1 tvg-id="TV5QuebecCanada.ca@SD",TV5 Quebec Canada (1080p)
-http://23.133.220.149/TV5/index.m3u8
+#EXTINF:-1 tvg-id="TPlusE.ca@SD",T+E (720p)
+http://185.246.209.113/T+E/index.m3u8
+#EXTINF:-1 tvg-id="CottageLife.ca@SD",Cottage Life (720p)
+http://185.246.209.113/CottageLife/index.m3u8
+#EXTINF:-1 tvg-id="CHCHDT.ca@SD",CHCH-DT (720p)
+http://185.246.209.113/CHCHHD/index.m3u8
+#EXTINF:-1 tvg-id="CTVLifeChannel.ca@SD",CTV Life Channel (720p)
+http://185.246.209.113/ANIMALPLANETHD/index.m3u8
+#EXTINF:-1 tvg-id="LoveNature.ca@HD",Love Nature HD (720p)
+http://185.246.209.113/LOVENATUREHD/index.m3u8
+#EXTINF:-1 tvg-id="CP24.ca@SD",CP24 (576p)
+https://trs1.aynaott.com/cp24/index.m3u8
+#EXTINF:-1 tvg-id="TSN3.ca@SD",TSN3 (720p)
+https://tsn1.shaanp76.workers.dev/
+#EXTINF:-1 tvg-id="DesheBidesheTV.ca@SD",DesheBideshe TV
+https://dbcanada.sonarbanglatv.com/deshebideshe/dbtv/index.m3u8
+#EXTINF:-1 tvg-id="TVOKids.ca@SD",TVOKids (720p)
+https://fastly.live.brightcove.com/6369851620112/us-east-1/15364602001/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJob3N0IjoicGZncmlmLmVncmVzcy50N2M3emwiLCJhY2NvdW50X2lkIjoiMTUzNjQ2MDIwMDEiLCJlaG4iOiJmYXN0bHkubGl2ZS5icmlnaHRjb3ZlLmNvbSIsImlzcyI6ImJsaXZlLXBsYXliYWNrLXNvdXJjZS1hcGkiLCJzdWIiOiJwYXRobWFwdG9rZW4iLCJhdWQiOlsiMTUzNjQ2MDIwMDEiXSwianRpIjoiNjM2OTg1MTYyMDExMiJ9.zRE6fD9JwdbNLUIK5zgvlTAvXCQ3HeeE5p0yH0Pd3-Q/playlist-hls.m3u8
+#EXTINF:-1 tvg-id="AzanTV.ca@SD",Azan TV
+https://dbcanada.sonarbanglatv.com/azantv/atv/index.m3u8
+#EXTINF:-1 tvg-id="DoyelTV.ca@SD",Doyel TV
+https://3d46w.doyeltv.com/memfs/aa3aa6f7-ec12-41a2-8183-a891e157bbf8.m3u8
+#EXTINF:-1 tvg-id="HauntTV.ca@SD",HauntTV (720p)
+http://206.212.244.63/87/index.m3u8
