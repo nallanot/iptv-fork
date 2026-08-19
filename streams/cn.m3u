@@ -238,12 +238,8 @@ http://223.110.245.157/ott.js.chinamobile.com/PLTV/3/224/3221225591/index.m3u8
 http://223.110.245.159/ott.js.chinamobile.com/PLTV/3/224/3221225838/index.m3u8
 #EXTINF:-1 tvg-id="YunnanSatelliteTV.cn@SD",云南卫视 (576p)
 http://223.110.245.173/PLTV/4/224/3221225838/index.m3u8
-#EXTINF:-1 tvg-id="YunnanSatelliteTV.cn@SD",云南卫视 (540p)
-http://112.25.48.68/live/program/live/ynws/1300000/mnf.m3u8
 #EXTINF:-1 tvg-id="",五星体育 (720p)
 http://223.110.245.147/ott.js.chinamobile.com/PLTV/3/224/3221226799/index.m3u8
-#EXTINF:-1 tvg-id="",亚太台 (480p)
-http://174.127.67.246/live330/playlist.m3u8
 #EXTINF:-1 tvg-id="",交城電視台 (576p)
 http://sxjc.chinashadt.com:2036/live/stream:jctv.stream/playlist.m3u8
 #EXTINF:-1 tvg-id="",京视剧场 (576p)
@@ -252,10 +248,6 @@ http://223.110.245.143/ott.js.chinamobile.com/PLTV/3/224/3221227040/index.m3u8
 http://220.180.110.101:8083/videos/live/39/13/o4ncrHkSp7q09/o4ncrHkSp7q09.m3u8
 #EXTINF:-1 tvg-id="",亳州新聞頻道 (360p)
 http://220.180.110.101:8083/videos/live/33/59/NC7XQdEveyncq/NC7XQdEveyncq.m3u8
-#EXTINF:-1 tvg-id="",仙桃新聞綜合 (576p)
-http://221.233.242.239:280/live/71/playlist.m3u8
-#EXTINF:-1 tvg-id="",仙桃生活文體 (576p)
-http://221.233.242.239:280/live/72/playlist.m3u8
 #EXTINF:-1 tvg-id="YouManCartoonChannel.cn@SD",优漫卡通 (576p)
 http://183.207.249.15/PLTV/4/224/3221225933/index.m3u8
 #EXTINF:-1 tvg-id="YouManCartoonChannel.cn@SD",优漫卡通 (576p)
@@ -332,10 +324,6 @@ https://live.nbs.cn/channels/njtv/jkpd/m3u8:500k/live.m3u8
 http://183.207.248.71/gitv/live1/G_NJJK/G_NJJK
 #EXTINF:-1 tvg-id="",南京教科 (576p)
 http://223.110.245.155/ott.js.chinamobile.com/PLTV/3/224/3221227194/index.m3u8
-#EXTINF:-1 tvg-id="",南川新闻综合 (360p)
-http://221.5.213.4:30000/1111.m3u8
-#EXTINF:-1 tvg-id="",南川旅游经济 (360p)
-http://221.5.213.4:30000/2222.m3u8
 #EXTINF:-1 tvg-id="",南阳新闻 (1080p) [Not 24/7]
 http://30539.hlsplay.aodianyun.com/lms_30539/tv_channel_142.m3u8
 #EXTINF:-1 tvg-id="",南陽公共頻道 (1080p) [Not 24/7]
@@ -492,14 +480,6 @@ http://livealone302.iqilu.com/iqilu/shpd.m3u8
 http://livealone302.iqilu.com/iqilu/zypd.m3u8
 #EXTINF:-1 tvg-id="ShandongTVQiluChannel.cn@SD",山东齐鲁 (1080p) [Geo-blocked]
 http://livealone302.iqilu.com/iqilu/qlpd.m3u8
-#EXTINF:-1 tvg-id="",山西影视
-http://220.194.178.58:8888/newlive/live/hls/53/live.m3u8
-#EXTINF:-1 tvg-id="",山西文体
-http://220.194.178.58:8888/newlive/live/hls/55/live.m3u8
-#EXTINF:-1 tvg-id="",山西法治
-http://220.194.178.58:8888/newlive/live/hls/54/live.m3u8
-#EXTINF:-1 tvg-id="",山西经济
-http://220.194.178.58:8888/newlive/live/hls/52/live.m3u8
 #EXTINF:-1 tvg-id="",岳阳公共 (576p)
 http://live.hnxttv.com:9601/live/dspd/800K/tzwj_video.m3u8?BVUUID=C236454D-5355-2F5F-FA96-1887C72E55CE&auth=654837809071524@615@2E9A5FD0B225B012E3178551CF3754A8
 #EXTINF:-1 tvg-id="",岷县电视台 (1080p)
@@ -752,18 +732,12 @@ http://223.110.245.139/PLTV/4/224/3221227307/index.m3u8
 http://live.hnxttv.com:9601/live/dspd/800K/tzwj_video.m3u8
 #EXTINF:-1 tvg-id="",湘潭新闻综合 (720p)
 http://live.hnxttv.com:9601/live/xwzh/800K/tzwj_video.m3u8
-#EXTINF:-1 tvg-id="",滁州公共 (450p)
-http://183.167.193.45:1935/live/cztvgg/playlist.m3u8
 #EXTINF:-1 tvg-id="ChuzhouPublicChannel.cn@SD",滁州市广播电视台 公共频道 (400p)
 http://live.cztv.cc:85/live/ggpd.m3u8
 #EXTINF:-1 tvg-id="ChuzhouNewsChannel.cn@SD",滁州市广播电视台 新闻综合频道 (1080p)
 http://live.cztv.cc:85/live/xwpd.m3u8
 #EXTINF:-1 tvg-id="ChuzhouScienceEducationChannel.cn@SD",滁州市广播电视台 科教频道 (400p)
 http://live.cztv.cc:85/live/sjpd.m3u8
-#EXTINF:-1 tvg-id="",滁州新闻综合 (450p)
-http://183.167.193.45:1935/live/cztvzh/playlist.m3u8
-#EXTINF:-1 tvg-id="ChuzhouScienceEducationChannel.cn@SD",滁州科教 (450p)
-http://183.167.193.45:1935/live/cztvkj/playlist.m3u8
 #EXTINF:-1 tvg-id="",滨海新闻 (1080p)
 http://60.30.52.41/live/bhtv1/playlist.m3u8
 #EXTINF:-1 tvg-id="",滨海都市 (1080p)
