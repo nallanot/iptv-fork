@@ -2,65 +2,60 @@ name: Daily sync upstream + build combined playlist
 
 on:
   schedule:
-    - cron: "0 8 * * *" # 08:00 UTC = 03:00 America/Montreal (hiver)
+    - cron: "0 8 * * *" # 08:00 UTC = 03:00 hiver / 04:00 été à Montréal
   workflow_dispatch: {}
 
 permissions:
   contents: write
   pull-requests: write
 
+concurrency:
+  group: iptv-daily-sync
+  cancel-in-progress: false
+
 jobs:
   sync_build_pr:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout fork
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
+          ref: master
           fetch-depth: 0
 
       - name: Configure git
         run: |
           git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-      - name: Add upstream remote
+      - name: Fetch and merge upstream
         run: |
-          git remote add upstream https://github.com/iptv-org/iptv.git
-          git remote -v
-
-      - name: Fetch upstream
-        run: |
+          git remote add upstream https://github.com/iptv-org/iptv.git || \
+            git remote set-url upstream https://github.com/iptv-org/iptv.git
           git fetch upstream master
-
-      - name: Merge upstream into local branch
-        run: |
-          git checkout master
           git merge upstream/master --no-edit
 
       - name: Build combined playlist
         run: |
           bash scripts/build-combined-m3u.sh
 
-      - name: Commit generated playlist (if changed)
-        run: |
-          git add custom2/combined.m3u
-          if git diff --cached --quiet; then
-            echo "No changes to commit."
-          else
-            git commit -m "chore: rebuild combined playlist"
-          fi
-
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v6
+      - name: Create or update Pull Request
+        uses: peter-evans/create-pull-request@v8
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: bot/daily-sync
           base: master
           title: "Daily upstream sync + rebuild combined.m3u"
           body: |
-            - Sync depuis https://github.com/iptv-org/iptv (master)
-            - Regénération de custom2/combined.m3u = index.m3u + custom2/my.m3u
+            - Synchronisation depuis iptv-org/iptv (master)
+            - Regénération de custom2/combined.m3u
+            - Ajout de custom2/my.m3u
+            - Conversion Viamotion DASH vers HLS8 lorsqu'une version HLS est disponible
           labels: |
             upstream-sync
             playlist
+          add-paths: |
+            custom2/combined.m3u
           commit-message: "chore: rebuild combined playlist"
+          delete-branch: true
