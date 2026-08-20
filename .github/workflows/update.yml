@@ -7,6 +7,7 @@ permissions:
   contents: read
 jobs:
   main:
+    if: github.repository == 'iptv-org/iptv'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
