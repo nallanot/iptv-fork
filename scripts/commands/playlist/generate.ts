@@ -48,14 +48,17 @@ async function main() {
   streams = streams.sortBy(
     [
       (stream: Stream) => stream.getId(),
-      (stream: Stream) => stream.getVerticalResolution(),
-      (stream: Stream) => stream.label
+      (stream: Stream) => (stream.isGeoBlocked ? -1 : 0),
+      (stream: Stream) => (stream.isNot247 ? -1 : 0),
+      (stream: Stream) => stream.getVerticalResolution()
     ],
-    ['asc', 'desc', 'desc']
+    ['asc', 'desc', 'desc', 'desc']
   )
 
   logger.info('filtering streams...')
-  streams = streams.uniqBy((stream: Stream) => stream.getId() || uniqueId())
+  streams = streams
+    .filter((stream: Stream) => !!stream.getId())
+    .uniqBy((stream: Stream) => stream.getId() || uniqueId())
 
   const { categories, countries, subdivisions, cities, regions } = data
 
