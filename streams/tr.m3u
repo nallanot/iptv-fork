@@ -424,6 +424,23 @@ https://nord.ayakkabiparti.lol/box3/index.m3u8
 #EXTINF:-1 tvg-id="ShowTurk.tr@SD",Show Turk (1080p)
 https://raw.githubusercontent.com/bnyusuf67-crypto/streams/refs/heads/main/streams/shturk.m3u8
 #EXTINF:-1 tvg-id="ATVAvrupa.tr@SD",ATV Avrupa (576p)
-https://flaskapihls-atv-avrupa-trkvzlive.onrender.com/hls_stream/master.m3u8
-#EXTINF:-1 tvg-id="SozcuTV.tr@SD",Sozcu TV (1080p)
-http://5.178.103.239:55/yt1/szctv.m3u8
+https://flask-api-hls-atvavrupahdtrkvz-live.onrender.com/hls_stream/master.m3u8
+#EXTINF:-1 tvg-id="Ekoturk.tr@SD",Ekoturk (720p)
+https://cdn.ekoturk.net/hls/master.m3u8
+#EXTINF:-1 tvg-id="TRTGenc.tr@SD",TRT Genc (1440p) [Geo-blocked]
+https://tv-trtgenc.medya.trt.com.tr/master.m3u8
+#EXTINF:-1 tvg-id="TRTWorld.tr@SD",TRT World (720p)
+https://mumbai-edge.smartplaytv.in/TRTWorld/index.m3u8
+#EXTINF:-1 tvg-id="BloombergHT.tr@SD",Bloomberg HT (720p)
+https://mumbai-edge.smartplaytv.in/BloombergHT/index.m3u8
+#EXTINF:-1 tvg-id="TRTBelgesel.tr@SD",TRT Belgesel (1080p)
+http://hls127.freeott.top:8080/TRT_BELGESEL_TR/video.m3u8
+#EXTINF:-1 tvg-id="BloombergHT.tr@SD",Bloomberg HT
+http://193.123.61.120:3000/kanal/bloomberght
+#EXTINF:-1 tvg-id="SpacetoonTurkey.tr@SD",Spacetoon Turkey (720p) [Not 24/7]
+#EXTVLCOPT:http-referrer=https://spacetoon.com.tr/
+https://live-tr-next.spacetoongo.com/ST_TR_NEXT/hls/h7qefeiwfbjn1.m3u8
+#EXTINF:-1 tvg-id="DreamTurk.tr@SD",Dream Turk
+https://xyktmobile00.s.gy/TICK_90055
+#EXTINF:-1 tvg-id="TRTWorld.tr@SD",TRT World (576p)
+https://cdn.pishow.tv/ott/live/266/master.m3u8

@@ -39,9 +39,43 @@ export function isURI(string: string): boolean {
 }
 
 export function normalizeURL(url: string): string {
-  const normalized = normalizeUrl(url, { stripWWW: false })
+  let normalized: string
+  try {
+    normalized = normalizeUrl(url, { stripWWW: false })
+  } catch {
+    return url.replace(/\s/g, '+')
+  }
 
-  return decodeURIComponent(normalized).replace(/\s/g, '+').toString()
+  try {
+    return decodeURIComponent(normalized).replace(/\s/g, '+')
+  } catch {
+    return normalized.replace(/\s/g, '+')
+  }
+}
+
+function isInsideDirectory(rootDir: string, target: string): boolean {
+  const relative = path.relative(rootDir, target)
+
+  return (
+    relative !== '' &&
+    relative !== '..' &&
+    !relative.startsWith(`..${path.sep}`) &&
+    !path.isAbsolute(relative)
+  )
+}
+
+export function getStoragePath(filepath: string, rootDir: string): string {
+  const root = path.resolve(rootDir)
+  const fromWorkspace = path.resolve(filepath)
+  const target = isInsideDirectory(root, fromWorkspace)
+    ? fromWorkspace
+    : path.resolve(root, filepath)
+
+  if (!isInsideDirectory(root, target)) {
+    throw new Error(`Filepath "${filepath}" is outside the storage directory`)
+  }
+
+  return path.relative(root, target).split(path.sep).join('/')
 }
 
 export function truncate(string: string, limit: number = 100) {
@@ -200,7 +234,8 @@ export function parseIssueBody(body: string): DataSet {
     'Channel ID': 'channel_id',
     'Feed ID': 'feed_id',
     'Stream URL': 'stream_url',
-    Label: 'label',
+    'Live 24/7': 'live_247',
+    'Geo-blocked': 'geo_blocked',
     Quality: 'quality',
     'HTTP User-Agent': 'http_user_agent',
     'HTTP User Agent': 'http_user_agent',
@@ -223,7 +258,16 @@ export function parseIssueBody(body: string): DataSet {
     if (!_label || !_value) return data
 
     const id = FIELDS.get(_label)
-    const value: string = _value === '_No response_' || _value === 'None' ? '' : _value
+    let value: string = ''
+    if (_value === '_No response_' || _value === 'None') {
+      value = ''
+    } else if (_value === 'Yes') {
+      value = 'TRUE'
+    } else if (_value === 'No') {
+      value = 'FALSE'
+    } else {
+      value = _value
+    }
 
     if (!id) return
 
