@@ -23076,6 +23076,5 @@ http://tvzvezda.bonus-tv.ru/cdn/zvezdaplus/playlist.m3u8
 #EXTINF:-1 tvg-id="ZweiMusicTelevision.de@SD" tvg-logo="https://i.imgur.com/RbdpCNf.png" group-title="Music",Zwei Music Television
 https://zweiapp.b-cdn.net/1080p/index.m3u8
 
-Including custom2/my.m3u
 #EXTINF:-1 tvg-id="" tvg-name="Ma chaîne" group-title="Perso",Ma chaîne
 https://example.com/stream.m3u8

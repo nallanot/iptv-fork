@@ -3,6 +3,14 @@ on:
   workflow_dispatch:
   pull_request:
     types: [opened, synchronize, reopened]
+  push:
+    branches: [master]
+    paths:
+      - 'custom2/**'
+      - 'scripts/build-combined-m3u.sh'
+      - 'scripts/validate-custom-playlist.py'
+      - '.github/workflows/check.yml'
+      - 'tests/custom/**'
 permissions:
   contents: read
 concurrency:
@@ -11,19 +19,36 @@ concurrency:
 jobs:
   check:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Check custom playlists and builder syntax
+        run: |
+          python3 -m unittest discover -s tests/custom -v
+          bash -n scripts/build-combined-m3u.sh
+          python3 scripts/validate-custom-playlist.py custom2/my.m3u custom2/combined.m3u
       - name: Get list of changed files
         id: files
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
         run: |
-          git fetch origin master:master
-          ANY_CHANGED=false
-          ALL_CHANGED_FILES=$(git diff --diff-filter=ACMRT --name-only master -- streams/ | tr '\n' ' ')
-          if [ -n "${ALL_CHANGED_FILES}" ]; then
-            ANY_CHANGED=true
+          files="$RUNNER_TEMP/changed-streams"
+          if [[ "$EVENT_NAME" == "pull_request" ]]; then
+            git diff --diff-filter=ACMRT --name-only -z "$BASE_SHA" HEAD -- streams/ > "$files"
+          elif [[ "$EVENT_NAME" == "workflow_dispatch" ]]; then
+            git ls-files -z -- 'streams/*.m3u' > "$files"
+          else
+            : > "$files"
           fi
-          echo "all_changed_files=$ALL_CHANGED_FILES" >> "$GITHUB_OUTPUT"
-          echo "any_changed=$ANY_CHANGED" >> "$GITHUB_OUTPUT"
+          if [[ -s "$files" ]]; then
+            echo 'any_changed=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'any_changed=false' >> "$GITHUB_OUTPUT"
+          fi
       - uses: actions/setup-node@v6
         if: steps.files.outputs.any_changed == 'true'
         with:
@@ -31,9 +56,10 @@ jobs:
           cache: 'npm'
       - name: Install dependencies
         if: steps.files.outputs.any_changed == 'true'
-        run: npm install
+        run: npm ci
       - name: Validate changed files
         if: steps.files.outputs.any_changed == 'true'
         run: |
-          npm run playlist:lint -- ${{ steps.files.outputs.all_changed_files }}
-          npm run playlist:validate -- ${{ steps.files.outputs.all_changed_files }}
+          mapfile -d '' -t files < "$RUNNER_TEMP/changed-streams"
+          npm run playlist:lint -- "${files[@]}"
+          npm run playlist:validate -- "${files[@]}"

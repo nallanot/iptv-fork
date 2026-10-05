@@ -2,8 +2,6 @@
 set -euo pipefail
 
 echo "=== BUILD COMBINED M3U ==="
-pwd
-ls -la
 
 MY_PLAYLIST="custom2/my.m3u"
 OUT_PLAYLIST="custom2/combined.m3u"
@@ -16,13 +14,14 @@ UPSTREAM_URLS=(
 mkdir -p custom2
 
 TMP="$(mktemp)"
-COMBINED_TMP="$(mktemp)"
+COMBINED_TMP="$(mktemp custom2/.combined.XXXXXX)"
+trap 'rm -f "$TMP" "$COMBINED_TMP"' EXIT
 echo "Temp file: $TMP"
 
 FOUND=0
 for URL in "${UPSTREAM_URLS[@]}"; do
   echo "Trying upstream: $URL"
-  if curl -L --fail --silent "$URL" -o "$TMP"; then
+  if curl -L --fail --silent --show-error --connect-timeout 10 --max-time 120 --retry 2 "$URL" -o "$TMP" && python3 scripts/validate-custom-playlist.py "$TMP"; then
     FOUND=1
     echo "Upstream OK: $URL"
     break
@@ -51,7 +50,8 @@ echo "Building combined playlist…"
   sed '1{/^#EXTM3U/d}' "$TMP"
   echo ""
   if [[ -f "$MY_PLAYLIST" ]]; then
-    echo "Including $MY_PLAYLIST"
+    echo "Including $MY_PLAYLIST" >&2
+    python3 scripts/validate-custom-playlist.py "$MY_PLAYLIST" >&2
     sed '1{/^#EXTM3U/d}' "$MY_PLAYLIST"
   else
     echo "# custom2/my.m3u not found"
@@ -76,12 +76,19 @@ for u in "${DASH_URLS[@]}"; do
   # HEAD first, fallback to GET if needed
   if curl -fsSI --max-time 8 "$hls" >/dev/null 2>&1 || curl -fsS --max-time 8 -o /dev/null "$hls" >/dev/null 2>&1; then
     # Replace all occurrences
-    sed -i "s#${u}#${hls}#g" "$COMBINED_TMP"
+    python3 - "$COMBINED_TMP" "$u" "$hls" <<'PY_REPLACE'
+import pathlib, sys
+p = pathlib.Path(sys.argv[1])
+p.write_text(p.read_text().replace(sys.argv[2], sys.argv[3]))
+PY_REPLACE
     echo "OK  : $u -> $hls"
   else
     echo "SKIP: $u (HLS not found)"
   fi
 done
+
+# Validate before replacing the last working playlist.
+python3 scripts/validate-custom-playlist.py "$COMBINED_TMP"
 
 # Write final output
 mv "$COMBINED_TMP" "$OUT_PLAYLIST"
