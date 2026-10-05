@@ -36,22 +36,32 @@ jobs:
 
           git fetch upstream master
 
-          git merge upstream/master --no-edit || {
-            echo "Merge conflicts detected"
-
-            # Keep this fork's GitHub Actions workflows when upstream conflicts with them.
-            git checkout --ours .github/workflows/
-            git add .github/workflows/
-
-            # Abort if any conflicts remain outside the workflows directory.
-            if git diff --name-only --diff-filter=U | grep -q .; then
-              echo "Unresolved conflicts remain:"
-              git diff --name-only --diff-filter=U
+          fork_head="$(git rev-parse HEAD)"
+          
+          # Squash so upstream workflow-changing commits are not pushed as ancestors.
+          if ! git merge --squash --no-commit upstream/master; then
+            # A merge error without conflicts is not safe to ignore.
+            if ! git diff --name-only --diff-filter=U | grep -q .; then
+              echo "Upstream merge failed without resolvable conflicts."
               exit 1
             fi
-
-            git commit --no-edit
-          }
+          fi
+          
+          # Restore the entire directory, including upstream additions and deletions.
+          git restore --source="$fork_head" --staged --worktree -- .github/workflows/
+          
+          if git diff --name-only --diff-filter=U | grep -q .; then
+            echo "Unresolved conflicts remain outside .github/workflows/:"
+            git diff --name-only --diff-filter=U
+            exit 1
+          fi
+          
+          # Never publish workflow changes using the daily sync token.
+          git diff --cached --exit-code "$fork_head" -- .github/workflows/
+          
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: sync upstream content while preserving fork workflows"
+          fi
 
       - name: Build combined playlist
         run: |
