@@ -33,8 +33,25 @@ jobs:
         run: |
           git remote add upstream https://github.com/iptv-org/iptv.git || \
             git remote set-url upstream https://github.com/iptv-org/iptv.git
+
           git fetch upstream master
-          git merge upstream/master --no-edit
+
+          git merge upstream/master --no-edit || {
+            echo "Merge conflicts detected"
+
+            # Keep this fork's GitHub Actions workflows when upstream conflicts with them.
+            git checkout --ours .github/workflows/
+            git add .github/workflows/
+
+            # Abort if any conflicts remain outside the workflows directory.
+            if git diff --name-only --diff-filter=U | grep -q .; then
+              echo "Unresolved conflicts remain:"
+              git diff --name-only --diff-filter=U
+              exit 1
+            fi
+
+            git commit --no-edit
+          }
 
       - name: Build combined playlist
         run: |
