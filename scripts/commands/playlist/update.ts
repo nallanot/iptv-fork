@@ -68,7 +68,7 @@ async function saveStreams() {
     let filteredStreams = new Collection<Stream>(groupedStreams.get(filepath))
     filteredStreams = filteredStreams.filter((stream: Stream) => stream.removed === false)
 
-    const playlist = new Playlist(filteredStreams, { public: false })
+    const playlist = new Playlist(filteredStreams, { public: false, raw: true })
     await streamsStorage.save(filepath, playlist.toString())
   }
 }
@@ -261,8 +261,14 @@ async function addStream(issue: Issue) {
     user_agent: httpUserAgent,
     referrer: httpReferrer,
     quality,
-    label: data.getString('label') || ''
+    label: null
   })
+
+  const live247 = data.getBoolean('live_247')
+  const geoBlocked = data.getBoolean('geo_blocked')
+
+  stream.isNot247 = live247 === undefined ? false : !live247
+  stream.isGeoBlocked = geoBlocked === true
 
   stream.updateTitle().updateFilepath()
 

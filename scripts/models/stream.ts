@@ -5,6 +5,7 @@ import * as sdk from '@iptv-org/sdk'
 import { DataSet } from '../core'
 import { data } from '../api'
 import path from 'node:path'
+import { PlaylistOptions } from './playlist'
 
 export class Stream extends sdk.Models.Stream {
   filepath?: string
@@ -14,6 +15,14 @@ export class Stream extends sdk.Models.Stream {
   tvgId?: string
   statusCode?: string
   guides = new Collection<sdk.Models.Guide>()
+  isNot247?: boolean
+  isGeoBlocked?: boolean
+  hasMainFeed?: boolean = false
+  hasUniqueName?: boolean = false
+  channelName?: string
+  feedName?: string
+  countryName?: string
+  channelUniqueName?: string
 
   setGuides(guides?: sdk.Models.Guide[]) {
     this.guides = new Collection(guides)
@@ -48,47 +57,52 @@ export class Stream extends sdk.Models.Stream {
       }
     }
 
-    const data = {
-      label: dataSet.isDeleted('label') ? '' : dataSet.getString('label'),
-      quality: dataSet.isDeleted('quality') ? '' : dataSet.getString('quality'),
-      httpUserAgent: dataSet.isDeleted('http_user_agent')
-        ? ''
-        : dataSet.getString('http_user_agent'),
-      httpReferrer: dataSet.isDeleted('http_referrer') ? '' : dataSet.getString('http_referrer')
-    }
+    const live247 = dataSet.getBoolean('live_247')
+    const geoBlocked = dataSet.getBoolean('geo_blocked')
 
-    if (data.label !== undefined) this.label = data.label
-    if (data.quality !== undefined) this.quality = data.quality
-    if (data.httpUserAgent !== undefined) this.user_agent = data.httpUserAgent
-    if (data.httpReferrer !== undefined) this.referrer = data.httpReferrer
+    if (live247 !== undefined) this.isNot247 = !live247
+    if (geoBlocked !== undefined) this.isGeoBlocked = geoBlocked
+
+    const quality = dataSet.isDeleted('quality') ? '' : dataSet.getString('quality')
+    const httpUserAgent = dataSet.isDeleted('http_user_agent')
+      ? ''
+      : dataSet.getString('http_user_agent')
+    const httpReferrer = dataSet.isDeleted('http_referrer')
+      ? ''
+      : dataSet.getString('http_referrer')
+
+    if (quality !== undefined) this.quality = quality
+    if (httpUserAgent !== undefined) this.user_agent = httpUserAgent
+    if (httpReferrer !== undefined) this.referrer = httpReferrer
 
     return this
   }
 
   static fromPlaylistItem(data: parser.PlaylistItem): Stream {
-    function escapeRegExp(text) {
+    function escapeRegExp(text: string) {
       return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&')
     }
 
     function parseName(name: string): {
       title: string
-      label: string
+      labels: string[]
       quality: string
     } {
       let title = name
-      const [, label] = title.match(/ \[(.*)\]$/) || [null, '']
-      title = title.replace(new RegExp(` \\[${escapeRegExp(label)}\\]$`), '')
-      const [, quality] = title.match(/ \(([0-9]+[p|i])\)$/) || [null, '']
+      const [, labels] = title.match(/ \[(.*)\]$/) || [null, '']
+      title = title.replace(new RegExp(` \\[${escapeRegExp(labels)}\\]$`), '')
+      const [, quality] = title.match(/ \(([0-9]+[pi])\)$/) || [null, '']
       title = title.replace(new RegExp(` \\(${quality}\\)$`), '')
 
-      return { title, label, quality }
+      return { title, labels: labels.split(';'), quality }
     }
 
     if (!data.name) throw new Error('"name" property is required')
     if (!data.url) throw new Error('"url" property is required')
 
-    const [channelId, feedId] = data.tvg.id.split('@')
-    const { title, label, quality } = parseName(data.name)
+    const tvgId = data.tvg?.id || ''
+    const [channelId, feedId] = tvgId.split('@')
+    const { title, labels, quality } = parseName(data.name)
 
     const stream = new Stream({
       channel: channelId || null,
@@ -96,13 +110,26 @@ export class Stream extends sdk.Models.Stream {
       title: title,
       quality: quality || null,
       url: data.url,
-      referrer: data.http.referrer || null,
-      user_agent: data.http['user-agent'] || null,
-      label: label || null
+      referrer: data.http?.referrer || null,
+      user_agent: data.http?.['user-agent'] || null,
+      label: null
     })
 
-    stream.tvgId = data.tvg.id
+    stream.tvgId = tvgId
     stream.line = data.line
+    stream.isNot247 = labels.includes('Not 24/7')
+    stream.isGeoBlocked = labels.includes('Geo-blocked')
+
+    const feed = stream.getFeed()
+    stream.hasMainFeed = feed?.is_main
+    stream.feedName = feed?.name
+
+    const channel = stream.getChannel()
+    stream.channelName = channel?.name
+
+    const country = channel?.getCountry()
+    stream.countryName = country?.name
+    stream.channelUniqueName = `${channel?.name} (${country?.name})`
 
     return stream
   }
@@ -307,6 +334,14 @@ export class Stream extends sdk.Models.Stream {
     return false
   }
 
+  hasChannel(): boolean {
+    return !!this.channel && !!this.getChannel()
+  }
+
+  hasFeed(): boolean {
+    return !!this.feed && !!this.getFeed()
+  }
+
   hasCategory(category: sdk.Models.Category): boolean {
     const channel = this.getChannel()
 
@@ -409,22 +444,54 @@ export class Stream extends sdk.Models.Stream {
     return logo ? logo.url : ''
   }
 
-  getFullTitle(): string {
-    let title = `${this.title}`
-
-    if (this.quality) {
-      title += ` (${this.quality})`
-    }
-
-    if (this.label) {
-      title += ` [${this.label}]`
+  getTitle(options: PlaylistOptions): string {
+    const raw = options.raw || false
+    let title = ''
+    if (raw) {
+      title += this.title
+    } else {
+      if (!this.hasUniqueName) {
+        title += this.channelUniqueName
+      } else {
+        title += this.channelName
+      }
+      if (this.feedName && !this.hasMainFeed) title += ' ' + this.feedName
     }
 
     return title
   }
 
-  toString(options: { public?: boolean } = {}) {
-    options = { ...{ public: false }, ...options }
+  getFullTitle(options: PlaylistOptions): string {
+    let title = this.getTitle(options)
+
+    if (this.quality) {
+      title += ` (${this.quality})`
+    }
+
+    const labels = this.getLabels()
+
+    if (labels.length) {
+      title += ` [${labels.join(';')}]`
+    }
+
+    return title
+  }
+
+  getLabels(): string[] {
+    const labels: string[] = []
+    if (this.isNot247 === true) {
+      labels.push('Not 24/7')
+    }
+
+    if (this.isGeoBlocked === true) {
+      labels.push('Geo-blocked')
+    }
+
+    return labels
+  }
+
+  toString(options: PlaylistOptions = {}) {
+    options = { ...{ public: false, raw: false }, ...options }
 
     let output = `#EXTINF:-1 tvg-id="${this.getTvgId()}"`
 
@@ -442,7 +509,7 @@ export class Stream extends sdk.Models.Stream {
       output += ` group-title="${this.groupTitle}"`
     }
 
-    output += `,${this.getFullTitle()}`
+    output += `,${this.getFullTitle(options)}`
 
     if (this.referrer) {
       output += `\r\n#EXTVLCOPT:http-referrer=${this.referrer}`
@@ -470,7 +537,7 @@ export class Stream extends sdk.Models.Stream {
       title: this.title,
       url: this.url,
       quality: this.quality,
-      label: this.label,
+      labels: this.getLabels(),
       user_agent: this.user_agent,
       referrer: this.referrer
     }
