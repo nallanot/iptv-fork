@@ -2,7 +2,7 @@ name: Daily sync upstream + build combined playlist
 
 on:
   schedule:
-    - cron: "0 8 * * *" # 08:00 UTC = 03:00 hiver / 04:00 été à Montréal
+    - cron: "0 8 * * *" # 08:00 UTC
   workflow_dispatch: {}
 
 permissions:
@@ -25,48 +25,25 @@ jobs:
           ref: master
           fetch-depth: 0
 
-      - name: Configure git
+      - name: Verify local scripts
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-      - name: Fetch and merge upstream
-        run: |
-          git remote add upstream https://github.com/iptv-org/iptv.git || \
-            git remote set-url upstream https://github.com/iptv-org/iptv.git
-
-          git fetch upstream master
-
-          fork_head="$(git rev-parse HEAD)"
-          
-          # Squash so upstream workflow-changing commits are not pushed as ancestors.
-          if ! git merge --squash --no-commit upstream/master; then
-            # A merge error without conflicts is not safe to ignore.
-            if ! git diff --name-only --diff-filter=U | grep -q .; then
-              echo "Upstream merge failed without resolvable conflicts."
-              exit 1
-            fi
-          fi
-          
-          # Restore the entire directory, including upstream additions and deletions.
-          git restore --source="$fork_head" --staged --worktree -- .github/workflows/
-          
-          if git diff --name-only --diff-filter=U | grep -q .; then
-            echo "Unresolved conflicts remain outside .github/workflows/:"
-            git diff --name-only --diff-filter=U
-            exit 1
-          fi
-          
-          # Never publish workflow changes using the daily sync token.
-          git diff --cached --exit-code "$fork_head" -- .github/workflows/
-          
-          if ! git diff --cached --quiet; then
-            git commit -m "chore: sync upstream content while preserving fork workflows"
-          fi
+          test -f scripts/build-combined-m3u.sh
+          test -f scripts/validate-custom-playlist.py
+          test -f custom2/my.m3u
 
       - name: Build combined playlist
+        shell: bash
         run: |
           bash scripts/build-combined-m3u.sh
+
+      - name: Verify generated playlist
+        shell: bash
+        run: |
+          test -s custom2/combined.m3u
+          python3 scripts/validate-custom-playlist.py custom2/combined.m3u
+          echo "Playlist statistics:"
+          wc -l custom2/combined.m3u
+          git status --short
 
       - name: Create or update Pull Request
         uses: peter-evans/create-pull-request@v8
@@ -74,15 +51,17 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: bot/daily-sync
           base: master
-          title: "Daily upstream sync + rebuild combined.m3u"
+          title: "Daily upstream playlist rebuild"
           body: |
-            - Synchronisation depuis iptv-org/iptv (master)
-            - Regénération de custom2/combined.m3u
-            - Ajout de custom2/my.m3u
-            - Conversion Viamotion DASH vers HLS8 lorsqu'une version HLS est disponible
-          labels: |
-            upstream-sync
-            playlist
+            Synchronisation quotidienne de la playlist IPTV publiée.
+
+            - Téléchargement de la playlist officielle iptv-org
+            - Conservation de custom2/my.m3u
+            - Génération de custom2/combined.m3u
+            - Conversion Viamotion DASH vers HLS8
+            - Validation du fichier M3U
+
+            Le code upstream et les workflows du fork ne sont pas modifiés.
           add-paths: |
             custom2/combined.m3u
           commit-message: "chore: rebuild combined playlist"
